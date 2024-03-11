@@ -34,3 +34,28 @@ print(f'mini has {mini.fuel} of fuel')
 print(f'beetle has {beetle.fuel} of fuel')
 beetle.drive()
 print(f'beetle has {beetle.fuel} of fuel')
+
+beetle.refuel(20)
+print(f'beetle has {beetle.fuel} of fuel')
+beetle.drive()
+print(f'beetle has {beetle.fuel} of fuel')
+
+class DZmenu:
+    def __init__(self, count):
+        self.count = count
+
+    def inputValue(self):
+        m = input("номер задания")
+        if m == 1:
+            selector()
+    def menu(self):
+        print("Menu")
+        inputValue()
+    def selector(self, b):
+        for i in range(b):
+            print(f'{i} строка')
+
+
+menu = DZmenu(3)
+menu.selector(55)
+

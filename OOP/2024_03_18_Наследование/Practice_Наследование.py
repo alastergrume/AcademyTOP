@@ -1,3 +1,4 @@
+
 class Car:
     def __init__(self, namemodel, manufacture, year, color, price, engine_amount):
         self.namemodel = namemodel
@@ -7,7 +8,7 @@ class Car:
         self.price = price
         self.engine = engine_amount
 
-    def getInput(self):
+    def getInput(self): # Внесение всей информации
         self.manufacture = input("Введите название производителя")
         self.namemodel = input("Введите название модели")
         self.color = input("Введите цвет")
@@ -16,7 +17,7 @@ class Car:
         self.price = input("Введите цену")
         print(f'Операция выполнена!\n {"*" * 11}')
 
-    def setInput(self, valeInput):
+    def setInput(self, valeInput): # Изменение информации
         if valeInput == 1:
             self.manufacture = input("Введите название производителя")
         if valeInput == 2:
@@ -31,7 +32,7 @@ class Car:
             self.price = input("Введите цену")
         print(f'Операция выполнена!\n {"*" * 11}')
 
-    def __str__(self):
+    def __str__(self): # Выводит информацию
         return f'''
 Производитель: {self.manufacture}
 Название модели: {self.namemodel}
@@ -41,14 +42,14 @@ class Car:
 Цена: {self.price}
 '''
 
-    def menu(self):
+    def menu(self): # Функция меню
         return f'''
 1. Посмотреть Информацию
 2. Дополнить информацию
 3. Изменить всю информацию
 0. Выход'''
 
-    def menuInput(self):
+    def menuInput(self): # Меню для выбора полей для изменения
         print(f'''
 1. Производитель: 
 2. Название модели: 

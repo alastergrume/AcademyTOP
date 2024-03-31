@@ -6,8 +6,8 @@ class Phone:
         print("Phone number: ", self.number)
 
 
-my_phone = Phone()
-my_phone.print_number()
+# my_phone = Phone()
+# my_phone.print_number()
 
 # public - нет реализации синтаксиса, по умолчанию
 # protected - одно нижнее подчеркивание
@@ -24,12 +24,12 @@ class Phone2:
         print("Times was turned on:", self.__how_many_times_turned_on)
 
 
-my_phone2 = Phone2()
-my_phone2.call()
-print("The username is", my_phone2.username)
+# my_phone2 = Phone2()
+# my_phone2.call()
+# print("The username is", my_phone2.username)
 
 # Полиморфизм
-# перегрузка методов - создание методов с одним и тем же методов, с одним и тем же именем,
+# перегрузка методов - создание методов с одним и тем же методом, с одним и тем же именем,
 # но с разными типами агументов, -> в ПАЙТОНЕ НЕ ПОДДЕРЖИВАЕТСЯ
 
 # Полиморфизм - передача параметров и методов класса другого значения тела функции,
@@ -54,12 +54,12 @@ class Dog:
     def make_sound(self):
         print("Bark")
 
-cat1 = Cat('Kitty', 2.5)
-dog1 = Dog("Fluffy", 4)
-for animal in (cat1, dog1):
-    animal.make_sound()
-    animal.info()
-    animal.make_sound()
+# cat1 = Cat('Kitty', 2.5)
+# dog1 = Dog("Fluffy", 4)
+# for animal in (cat1, dog1):
+#     animal.make_sound()
+#     animal.info()
+#     animal.make_sound()
 
 
 # пример переопределения метода (перегрузка)
@@ -78,7 +78,7 @@ class Shape:
 
 class Squre(Shape):
     def __init__(self, lenght):
-        super().__init__("Squre") # специальный метод для обращеия к классу родителю.
+        super().__init__("Squre") # super() - специальный метод для обращеия к классу родителю.
         self.lenght = lenght
     def area(self):
         return self.lenght**2
@@ -96,9 +96,9 @@ class Circle(Shape):
 
 a = Squre(4)
 b = Circle(7)
-print(20*"*", "пример", 20*"*")
-print(b, "Вывод 1")
+# print(20*"*", "пример", 20*"*")
+# print(b, "Вывод 1")
 print(b.fact(), 'Вывод два')
-print(a.fact(), 'Вывод три')
-print(b.area(), 'Вывод четыре')
+# print(a.fact(), 'Вывод три')
+# print(b.area(), 'Вывод четыре')
 

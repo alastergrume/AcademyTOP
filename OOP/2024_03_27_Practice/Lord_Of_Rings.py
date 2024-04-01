@@ -32,3 +32,4 @@ class Swordsman: # Мечник
 class Mage: # Маг
 
     def __init__(self):
+        pass

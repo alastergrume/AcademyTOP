@@ -15,21 +15,30 @@ Explain
 Не могу атаковать! Мана закончилась."""
 
 class NPC: # Базовый класс
-    def __init__(self, name:str, hp:int):
+    def __init__(self, name, hp):
         self.name = name
         self.hp = hp
     def __str__(self):
         return f'Имя: {self.name}, Очки здоровья: {self.hp}'
     def attack(self:int):
-        return f'Не могу аттаковать'
+        return f'Не могу атаковать'
 
-class Swordsman: # Мечник
+class Swordsman(NPC): # Мечник
 
-    def __init__(self):
-        pass
+    def __init__(self, name, hp):
+        super().__init__(name, hp)
 
 
-class Mage: # Маг
+class Mage(NPC): # Маг
 
-    def __init__(self):
-        pass
+    def __init__(self, name, hp):
+        super().__init__(name, hp)
+
+
+npc = NPC("Bilbo", 0)
+swordsman = Swordsman("Aragorn", 10)
+mage = Mage("Gendalf", 10)
+print(npc)
+print(npc.attack())
+print(swordsman)
+print(mage)

@@ -199,16 +199,29 @@ class Stadium:
                 f'Вместимость - {self.capacity}\n')
 
     def menu(self):
-        return f'1. Вывести список\n2. Внести изменения в поля\n3. Ввести информацию о стадионе\n4. Выход'
+        return f'1. Вывести список\n2. Внести изменения в поля\n3. Ввести информацию о стадионе\n0. Выход'
 
 
 # Перегрузка класса Стадион
 class newStadium(Stadium):
-    def __init__(self, name_of_builder):
-        super().__init__(Stadium)
+    def __init__(self, name_of_builder=None):  # Наследование методов
+        super().__init__()
         self.name_of_builder = name_of_builder
 
-    def __str__(self):
+    def inputData(self):
+        super().inputData()
+        self.name_of_builder = input("Имя строителя - ")
+
+    # def SetNewData(self, book_data_value):
+    #     super().SetNewData(Stadium)
+    #     if book_data_value == 6:
+    #         self.name_of_builder = input("Имя строителя - ")
+
+    # def menu_SetNewData(self):
+    #     super().menu_SetNewData()
+    #     print("6. Изменить имя строителя - ")
+
+    def __str__(self):  # Переопределяю метод (Полиморфизм)
         return (f'Имя того кто построил стадион - {self.name_of_builder}\n'
                 f'Название стадиона - {self.name_stadium}\n'
                 f'Дата открытия - {self.date_of_open}\n'
@@ -218,66 +231,74 @@ class newStadium(Stadium):
 
 
 
-b = newStadium("Роберт")
-print(b)
-b.inputData()
-print(b)
+def main():
+    while True:
+        print(f'Главное меню:\n'
+              f'1. Класс Автомобиль\n'
+              f'2. Класс Книга\n'
+              f'3. Класс Стадион\n'
+              f'0. Выход')
+        input_val = int(input("Введите номер задания - "))
+        if input_val == 1:
+            auto = Car('Boomer', 'BMW', '2023', 'red', '10 000 000', '3.5')
+            while True:
+                print("Класс Автомобиль")
+                print(auto.menu())
+                value = int(input("Введите номер из меню - "))
+                if value == 0:
+                    break
+                if value == 1:
+                    print(auto)
+                if value == 2:
+                    auto.menuInput()
+                if value == 3:
+                    auto.getInput()
+        if input_val == 2:
+            print("Класс Книга")
+            book = Book()
+            while True:
+                print(book.menu())
+                menu_value = int(input("Введите номер меню - "))
+                if menu_value == 1:
+                    print(book)
+                if menu_value == 2:
+                    book.menu_SetNewData()
+                if menu_value == 3:
+                    book.inputData()
+                if menu_value == 4:
+                    break
+        if input_val == 3:
+            print("Класс Стадион")
+            stadium = Stadium()
+            while True:
+                print(stadium.menu())
+                value = int(input("Введите номер из меню - "))
+                if value == 0:
+                    break
+                if value == 1:
+                    print(stadium)
+                if value == 2:
+                    stadium.menu_SetNewData()
+                if value == 3:
+                    stadium.inputData()
+        if input_val == 4:
+            print("Класс Новый Стадион")
+            stadium = newStadium()
+            while True:
+                print(stadium.menu())
+                value = int(input("Введите номер из меню - "))
+                if value == 0:
+                    break
+                if value == 1:
+                    print(stadium)
+                if value == 2:
+                    stadium.menu_SetNewData()
+                if value == 3:
+                    stadium.inputData()
+        if input_val == 0:
+            break
+    print("See you soone")
 
 
-# def main():
-#     while True:
-#         print(f'Главное меню:\n'
-#               f'1. Класс Автомобиль\n'
-#               f'2. Класс Книга\n'
-#               f'3. Класс Стадион\n'
-#               f'0. Выход')
-#         input_val = int(input("Введите номер задания - "))
-#         if input_val == 1:
-#             auto = Car('Boomer', 'BMW', '2023', 'red', '10 000 000', '3.5')
-#             while True:
-#                 print("Класс Автомобиль")
-#                 print(auto.menu())
-#                 value = int(input("Введите номер из меню - "))
-#                 if value == 0:
-#                     break
-#                 if value == 1:
-#                     print(auto)
-#                 if value == 2:
-#                     auto.menuInput()
-#                 if value == 3:
-#                     auto.getInput()
-#         if input_val == 2:
-#             print("Класс Книга")
-#             book = Book()
-#             while True:
-#                 print(book.menu())
-#                 menu_value = int(input("Введите номер меню - "))
-#                 if menu_value == 1:
-#                     print(book)
-#                 if menu_value == 2:
-#                     book.menu_SetNewData()
-#                 if menu_value == 3:
-#                     book.inputData()
-#                 if menu_value == 4:
-#                     break
-#         if input_val == 3:
-#             print("Класс Стадион")
-#             stadium = Stadium()
-#             while True:
-#                 print(stadium.menu())
-#                 value = int(input("Введите номер из меню - "))
-#                 if value == 0:
-#                     break
-#                 if value == 1:
-#                     print(stadium)
-#                 if value == 2:
-#                     stadium.menu_SetNewData()
-#                 if value == 3:
-#                     stadium.inputData()
-#         if input_val == 0:
-#             break
-#     print("See you soone")
-#
-#
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()

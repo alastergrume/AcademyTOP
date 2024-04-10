@@ -1,0 +1,1 @@
+{'USA': 'Boston', 'UK': 'London', 'Russia': 'Moscow'}

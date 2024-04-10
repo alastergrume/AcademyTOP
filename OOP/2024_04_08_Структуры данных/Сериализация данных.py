@@ -79,7 +79,7 @@ class CountryDict:
                 self.remove_data()
             if self.user_input == 3:
                 self.new_country = input('Input SEARCHE country - ')
-                self.search()
+                print(self.search())
             if self.user_input == 4:
                 self.new_country = input('Input Country')
                 self.new_capital = input('Input NEW Capital')

@@ -98,7 +98,7 @@ class Article:
         print(self.article_dict)
 
     def load_json(self):
-
+        pass
 
 artcile = Article()
 

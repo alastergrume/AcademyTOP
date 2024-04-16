@@ -1,3 +1,8 @@
+import inspect
+
+from menu import MainMenu
+
+
 class myQueue:
     """
     Задание 1
@@ -20,17 +25,17 @@ class myQueue:
         if self.mySuperStack == 0:
             return "Стэк пуст!"
         else:
-            return f'Стэк содержит {len(self.mySuperStack)} элементов.'
+            return f'Стэк содержит {len(self.mySuperStack)} эллементов.'
 
     def IsFull(self):
         if len(self.mySuperStack) == self.maxsize:
             return "Стек полон!"
         else:
-            return f'В стеке ещё поместится {self.maxsize - len(self.mySuperStack)} элементов.'
+            return f'В стеке ещё поместится {self.maxsize - len(self.mySuperStack)} эллементов.'
 
     def Enqueue(self):
         if len(self.mySuperStack) < self.maxsize:
-            new_item = input(f'Введите элемент - ')
+            new_item = input(f'Введите эллемент - ')
             self.mySuperStack.append(new_item)
             return f'New item {new_item} added in stack {self.Show()}'
         else:
@@ -49,29 +54,29 @@ class myQueue:
         else:
             return self.mySuperStack
 
-
-# myqueue2 = myQueue()
-# while True:
-#     print("""
-#         1. Проверить очередь очередь на пустоту.
-#         2. Проверить очередь на заполнение.
-#         3. Добавить элемент в очередь.
-#         4. Удалить элемент из очереди.
-#         5. Отобразить все элементы очереди на экран.
-#     """)
-#     choiсe = int(input("Введите номер меню - "))
-#     if choiсe == 5:
-#         print(myqueue2.Show())
-#     if choiсe == 4:
-#         print(myqueue2.Dequeue())
-#     if choiсe == 3:
-#         print(myqueue2.Enqueue())
-#     if choiсe == 2:
-#         print(myqueue2.IsFull())
-#     if choiсe == 1:
-#         print(myqueue2.IsEmpty())
-#     if choiсe == 0:
-#         break
+    def menu(self):
+        while True:
+            print("""
+                1. Проверить очередь очередь на пустоту.
+                2. Проверить очередь на заполнение.
+                3. Добавить эллемент в очередь.
+                4. Удалить эллемент из очереди.
+                5. Отобразить все эллементы очереди на экран.
+                0. Выход
+            """)
+            choiсe = int(input("Введите номер меню - "))
+            if choiсe == 5:
+                print(self.Show())
+            if choiсe == 4:
+                print(self.Dequeue())
+            if choiсe == 3:
+                print(self.Enqueue())
+            if choiсe == 2:
+                print(self.IsFull())
+            if choiсe == 1:
+                print(self.IsEmpty())
+            if choiсe == 0:
+                break
 
 
 class myQueue2:
@@ -115,14 +120,14 @@ class myQueue2:
         if self.mySuperStack == 0:
             return "Стэк пуст!"
         else:
-            return f'Стэк содержит {len(self.mySuperStack)} элементов.'
+            return f'Стэк содержит {len(self.mySuperStack)} эллементов.'
 
     # INFO: 2 проверка очереди на заполнение
     def IsFull(self):
         if len(self.mySuperStack) == self.maxsize:
             return "Стек полон!"
         else:
-            return f'В стеке ещё поместится {self.maxsize - len(self.mySuperStack)} элементов.'
+            return f'В стеке ещё поместится {self.maxsize - len(self.mySuperStack)} эллементов.'
 
     # INFO: 3 добавление элемента c приоритетом в очередь.
     def InsertWithPriority(self):
@@ -136,20 +141,20 @@ class myQueue2:
     # INFO: 4 Удаление элемента с самымым высоким приоритетом из очереди
     def PullHighestPriorityElement(self):
         if len(self.mySuperStack) > 1:
-            info_del_item = [f'Индекс - {self.index_max_item}', f'Элемент - {self.mySuperStack[self.index_max_item]}']
+            info_del_item = [f'Индекс - {self.index_max_item}', f'Эллемент - {self.mySuperStack[self.index_max_item]}']
             self.mySuperStack.pop(self.index_max_item)
-            return f'"Элемент {info_del_item} удален'
+            return f'"Эллемент {info_del_item} удален'
         if len(self.mySuperStack) == 1:
             info_del_item = [x for x in self.mySuperStack]
             self.mySuperStack.pop()
-            return f'"Элемент {info_del_item} удален'
+            return f'"Эллемент {info_del_item} удален'
         else:
-            return f'Стэк уже пустой, нечего из него удалять'
+            return f'Стэк уже пустой, нечего из него удалить'
 
     # INFO: возврат самого большого по приоритету элемента
     def Peak(self):
         if len(self.mySuperStack) != 0:
-            return self.Priority()
+            return f'{self.Priority()}\nЭллемент: {self.mySuperStack[self.index_max_item]}'
         else:
             return self.IsEmpty()
 
@@ -161,43 +166,39 @@ class myQueue2:
 
             return f"Cтэк {self.mySuperStack}"
 
+    def menu(self):
+        while True:
+            print("""
+                1. Проверить очередь очередь на пустоту.
+                2. Проверить очередь на заполнение.
+                3. Добавить элемент в очередь.
+                4. Удалить элемент из очереди.
+                5. Отобразить элемент с самым высоким приоритетом в стэке
+                6. Отобразить все элементы очереди на экран.
+                0. Выход
+            """)
+            try:
+                choice = int(input("Введите номер меню - "))
+                if choice == 6:
+                    print(self.Show())
+                if choice == 5:
+                    print(self.Peak())
+                if choice == 4:
+                    print(self.PullHighestPriorityElement())
+                if choice == 3:
+                    print(self.InsertWithPriority())
+                if choice == 2:
+                    print(self.IsFull())
+                if choice == 1:
+                    print(self.IsEmpty())
+                if choice == 0:
+                    break
+            except ValueError:
+                print("Попробуй ещё раз")
 
-# myqueue2 = myQueue2()
-# while True:
-#     print("""
-#         1. Проверить очередь очередь на пустоту.
-#         2. Проверить очередь на заполнение.
-#         3. Добавить элемент в очередь.
-#         4. Удалить элемент из очереди.
-#         5. Отобразить элемент с самым высоким приоритетом в стэке
-#         6. Отобразить все элементы очереди на экран.
-#     """)
-#     try:
-#         choice = int(input("Введите номер меню - "))
-#         if choice == 6:
-#             print(myqueue2.Show())
-#         if choice == 5:
-#             print(myqueue2.Peak())
-#         if choice == 4:
-#             print(myqueue2.PullHighestPriorityElement())
-#         if choice == 3:
-#             print(myqueue2.InsertWithPriority())
-#         if choice == 2:
-#             print(myqueue2.IsFull())
-#         if choice == 1:
-#             print(myqueue2.IsEmpty())
-#         if choice == 0:
-#             break
-#     except ValueError:
-#         print("Попробуй ещё раз")
-#
-#
-#
-# # TODO Сделать третье задание
 
 # TODO закончить третье задание
-class loging_app:
-
+class LogingApp:
     """Задание №3
     Задание 3
     Необходимо разработать приложение, которое позволит сохранять информацию о логинах пользователей и их
@@ -212,29 +213,79 @@ class loging_app:
     постановкой задачи.
     """
 
-    pass
+    def __init__(self):
+        self.article_dict = []
+        self.item_list = ['login', 'password']
 
-# TODO Переделать потом в класс меню
-class MainMenu:
-    def __init__(self, class_name=None, object_name=None):
-        self.class_name = class_name
-        self.object_name = object_name
+    def _searche_user(self):
+        key = input('Введите имя пользователя - ')
+        index = 0
+        for i in self.item_list:
+            if self.article_dict[index]['login'] == key:
+                return self.article_dict[index]
+            index += 1
+    def formate_dict(self):
+        my_dict = {k: f'{input(f"input {k} - ")}' for k in self.item_list}
+        self.article_dict.append(my_dict)
+        return self.article_dict
 
+    def dell_user(self):
+        key = input('Введите имя пользователя - ')
+        index = 0
+        for i in self.item_list:
+            if self.article_dict[index]['login'] == key:
+                del self.article_dict[index]
+            index += 1
+
+    def show(self):
+        key = input('Введите имя пользователя - ')
+        index = 0
+        for i in self.item_list:
+            if self.article_dict[index]['login'] == key:
+                print(self.article_dict[index]['login'], self.article_dict[index]['password'])
+            index += 1
+
+    def chaged_username(self):
+        self._searche_user()
+        self._searche_user()['login'] = input('Введите новое имя пользователя - ')
+        print(self.article_dict)
+
+    def chaged_passwd(self):
+        self._searche_user()
+        self._searche_user()['password'] = input('Введите новый пароль - ')
+        print(self.article_dict)
 
     def menu(self):
         while True:
-            print(f'Класс - {self.class_name}')
-            print(self.object_name.menu())
-            value = int(input("Введите номер из меню - "))
-            if value == 0:
-                break
-            if value == 1:
-                print(self.class_name, self.object_name)
-            if value == 2:
-                self.object_name.menu_SetNewData()
-            if value == 3:
-                self.object_name.inputData()
+            print("""
+                1. Добавить нового пользователя
+                2. Удалить существующего пользователя
+                3. Проверить существует ли пользователь
+                4. Изменить логин существующего пользователя
+                5. Изменить пароль существующего пользователя
+                0. Выход
+            """)
+            try:
+                choice = int(input("Введите номер меню - "))
+                if choice == 5:
+                    self.chaged_passwd()
+                if choice == 4:
+                    self.chaged_username()
+                if choice == 3:
+                    self.show()
+                if choice == 2:
+                    self.dell_user()
+                if choice == 1:
+                    print(self.formate_dict())
+                if choice == 0:
+                    break
+            except ValueError:
+                print("Попробуй ещё раз")
 
-# if __name__ == "__main__":
-#     menu = MainMenu()
-#     menu.menu()
+
+if __name__ == "__main__":
+    myqueue1 = myQueue()
+    myqueue2 = myQueue2()
+    logging_app = LogingApp()
+    menu = MainMenu([myqueue1, myqueue2, logging_app])
+    menu.menu()

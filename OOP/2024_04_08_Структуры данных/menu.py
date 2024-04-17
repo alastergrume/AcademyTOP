@@ -1,6 +1,21 @@
 class MainMenu:
+    # _instance = None
+
+    # def __new__(cls, *args, **kwargs):
+    #     if not MainMenu._instance:
+    #         MainMenu._instance = super(MainMenu, cls).__new__(cls, *args, **kwargs)
+    #     return MainMenu._instance
     def __init__(self, class_name=None):
+        # if not MainMenu.__instance:
+        #     print("__init__ method called..")
+        # else:
+        #     print("Instance already created", self.getInstance())
         self.class_name = class_name
+    # @classmethod
+    # def getInstance(cls):
+    #     if not cls.__instance:
+    #         cls.__instance = MainMenu()
+    #     return cls.__instance
 
     def menu(self):
         while True:

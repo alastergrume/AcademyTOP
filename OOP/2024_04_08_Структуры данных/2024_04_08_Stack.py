@@ -220,8 +220,8 @@ class LogingApp:
     def _searche_user(self):
         key = input('Введите имя пользователя - ')
         index = 0
-        for i in self.article_dict:
-            if i[index]['login'] == key:
+        for i in self.item_list:
+            if self.article_dict[index]['login'] == key:
                 return self.article_dict[index]
             index += 1
     def formate_dict(self):
@@ -246,13 +246,13 @@ class LogingApp:
             index += 1
 
     def chaged_username(self):
-        #self._searche_user()
-        self.article_dict[self._searche_user()]['login'] = input('Введите новое имя пользователя - ')
+        self._searche_user()
+        self._searche_user()['login'] = input('Введите новое имя пользователя - ')
         print(self.article_dict)
 
     def chaged_passwd(self):
         self._searche_user()
-        #self._searche_user()['password'] = input('Введите новый пароль - ')
+        self._searche_user()['password'] = input('Введите новый пароль - ')
         print(self.article_dict)
 
     def menu(self):

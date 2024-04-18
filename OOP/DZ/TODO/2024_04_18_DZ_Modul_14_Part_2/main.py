@@ -33,9 +33,9 @@ class Numbers:
         count = 0
         for i in self.list_of_numbers:
             if i == user_choise:
-                 found_positiins.append(count) 
+                 found_positions.append(count) 
             count += 1
-            else: . 
+            else:
                 print(f'Эллемент {user_choice} не найден') 
         print(f'Количестов найденых эллементов {len(found_positions}\n'Позиции найденных элементов в списке - {found_positions}) 
 

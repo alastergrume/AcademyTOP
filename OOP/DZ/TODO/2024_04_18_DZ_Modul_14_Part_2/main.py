@@ -1,3 +1,4 @@
+import inspect
 class Numbers:
     def __init__(self):
         self.list_of_numbers = []
@@ -27,6 +28,9 @@ class Numbers:
 
     def rewrite_item(self):
         pass
+    def show_methods(self):
+        method_list = sorted(Numbers.methods)
+        print(method_list)
     def menu(self):
         while True:
             list_menu = [
@@ -55,7 +59,7 @@ class Numbers:
                 if user_choice == 4:
                     pass
                 if user_choice == 5:
-                    pass
+                    self.show_methods()
             except ValueError as e:
                 print(e)
             except Exception as e:
@@ -69,7 +73,15 @@ if __name__ == '__main__':
     numbers.menu()
     # methods = list()
     # for meth in dir(numbers):
-    #     if callable(getattr(numbers, meth)):
-    #         methods.append(meth)
-    # print(methods)
-
+    #     # if callable(getattr(numbers, meth)):
+    #
+    #     methods.append(meth)
+    # # print(methods)
+    # method_list = inspect.getmembers(numbers, predicate=inspect.ismethod)
+    # for i in method_list:
+    #     print(i)
+    # print(method_list)
+    #
+    # method_list = sorted(numbers.methods)
+    # print(method_list)
+    # print(Numbers.mro())

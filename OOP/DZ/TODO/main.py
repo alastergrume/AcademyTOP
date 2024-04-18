@@ -18,7 +18,7 @@ class MainMenu:
             if value == 2:
                 self.object_name.menu_SetNewData()
             if value == 3:
-                self.object_name.inputData()
+                self.object_name.inputData
 
 
 if __name__ == "__main__":

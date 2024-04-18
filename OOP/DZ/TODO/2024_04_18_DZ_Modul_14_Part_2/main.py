@@ -18,7 +18,11 @@ class Numbers:
                 break
 
     def del_item(self):
-        pass
+        user_choice = input("Введите число для удаления") 
+        for i in self.list_of_numbers:
+            if i == int(user_choice):
+                self.list_of_numbers.pop(i) 
+                print(f"Элемент {i} удален") 
     def showListOfNumbers(self):
         print(self.list_of_numbers)
 

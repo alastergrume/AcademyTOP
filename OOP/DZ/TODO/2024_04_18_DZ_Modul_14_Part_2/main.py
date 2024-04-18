@@ -22,12 +22,22 @@ class Numbers:
         for i in self.list_of_numbers:
             if i == int(user_choice):
                 self.list_of_numbers.pop(i) 
-                print(f"Элемент {i} удален") 
+                print(f"Элемент {user_choice} удален") 
+            else: f' Элемент {user_choice}     не найден'
     def showListOfNumbers(self):
-        print(self.list_of_numbers)
+        print(f'В памяти сейчас содержаться следующие эллементы\n{self.list_of_numbers}')
 
     def searche_item(self):
-        pass
+        user_choice = input("Введите число для поиска - ") 
+        found_positions = []
+        count = 0
+        for i in self.list_of_numbers:
+            if i == user_choise:
+                 found_positiins.append(count) 
+            count += 1
+            else: . 
+                print(f'Эллемент {user_choice} не найден') 
+        print(f'Количестов найденых эллементов {len(found_positions}\n'Позиции найденных элементов в списке - {found_positions}) 
 
     def rewrite_item(self):
         pass

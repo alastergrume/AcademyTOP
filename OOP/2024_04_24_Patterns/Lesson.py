@@ -121,5 +121,111 @@ class Name:
 if __name__ == "__main__":
     Name.print_name()
 
-#Паттерн Command
 
+
+
+#Паттерн Command
+from sys import stdout as console
+
+class SessionClosed(Exception):
+    def __init__(self, value):
+        self.value = value
+
+
+# Интрефейс программы
+class Command:
+    def execute(self):
+        raise NotImplementedError()
+    def cancel(self):
+        raise NotImplementedError()
+    def name(self):
+        raise NotImplementedError()
+
+# Команда rm
+
+class ReCommand(Command):
+    def execute(self):
+        console.write('You are executed \"rm \"rm command \n ')
+    def cancel(self):
+        console.write('You are executed \"rm \"rm command \n ')
+    def name(self):
+        return "rm"
+
+# Команда uptime
+class UptimeCommand(Command):
+    def execute(self):
+        console.write('You are executed \"rm \"rm command \n ')
+    def cancel(self):
+        console.write('You are executed \"rm \"rm command \n ')
+    def name(self):
+        return "rm"
+
+
+# Команда UNDO
+class UndoCommand(Command):
+    def execute(self):
+        try:
+            cmd = HISTORY.pop()
+            TRASH.append(cmd)
+            console.write("Undo command \" {0} \" \n".format(cmd.name()))
+            cmd.cancel()
+        except IndexError:
+            console.write("ERROR: HISTORY is empty \n")
+
+    def name(self):
+        return "undo"
+# Команда redo
+class RedoCommand(Command):
+    def execute(self):
+        try:
+            cmd = HISTORY.pop()
+            TRASH.append(cmd)
+            console.write("Undo command \" {0} \" \n".format(cmd.name()))
+            cmd.cancel()
+
+        except IndexError:
+            console.write("ERROR: HISTORY is empty \n")
+    def name(self):
+        return "redo"
+
+# Команда History
+class HistoryCommand(Command):
+    def execute(self):
+        i=0
+        for cmd in HISTORY:
+            console.write("{0}: {1}\n".format(i, cmd.name()))
+
+    def name(self):
+        print("History")
+
+# Комманда excite
+class ExitCommand(Command):
+    def execute(self):
+        raise SessionClosed("Goodbye!")
+    def name(self):
+        return "exit"
+
+COMMANDS = {"rm":ReCommand(), "uptime": UptimeCommand(), "UNDO": UndoCommand(), "redo": RedoCommand(), "History": HistoryCommand(), "exite": ExitCommand()}
+
+HISTORY = list()
+TRASH = list()
+
+def main():
+    try:
+        while True:
+            console.flush()
+            console.write("pysh>> ")
+            cmd = input()
+            try:
+                command = COMMANDS[cmd]
+                command.execute()
+                if not isinstance(command, UndoCommand) and not isinstance(command, HistoryCommand):
+                    TRASH = list()
+                    HISTORY.append(command)
+            except KeyError:
+                console.write("ERROR: HISTORY is empty \n")
+    except SessionClosed as e:
+        console.write(e.value)
+
+if __name__ == "__main__":
+    main()

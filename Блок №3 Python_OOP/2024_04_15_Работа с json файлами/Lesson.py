@@ -105,7 +105,7 @@ artcile = Article()
 
 def main():
     while True:
-        print("1 - внести словарь, 2 - вывести словарь, 0 - Exite")
+        print("1 - внести словарь, 2 - вывести словарь, 3 - Exite")
         choice = int(input("Input your choice"))
         if choice == 1:
             artcile.formate_dict()

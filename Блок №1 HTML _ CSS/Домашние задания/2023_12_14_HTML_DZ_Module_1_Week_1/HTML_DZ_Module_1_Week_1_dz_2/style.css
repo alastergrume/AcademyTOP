@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Varela+Round&display=swap');
+
+body{
+    background: #cad2e0;
+}
+
+.cards_first_row, .cards_two_row{ /*Параметры рядов карт, установка в один ряд*/
+	display: flex;
+	margin: 20px;
+	padding: 20px;
+	font-size: 50px;
+}
+.black_cards, .red_cards{ /*настройка самих карт*/
+	display: flex;
+	font-size: 150px;
+	font-family: 'Varela Round', sans-serif;
+	background: #91a0ba;
+	margin: 20px;
+	padding: 20px;
+	size-box: conteiner-block; 
+}
+p{ /*Надписи Игрок1 и Игрок 2*/
+	font-family: 'PT Sans', sans-serif;
+	font-size: 100px;
+	margin: 10px;
+}
+.red_cards{ /*Цвет красных мастей*/
+	color: red;
+}
+.suit{ /*необходимо для устранения переноса на другую строку при изменении масштаба*/
+	display: flex;
+}

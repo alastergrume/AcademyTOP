@@ -1,0 +1,46 @@
+body{
+
+}
+#card{
+    background: #3581b19f;
+    width: 500px;
+    height: 200px;
+    position: relative;
+    top: 40px;
+    left: 40px;
+    border-radius: 20px;
+    border: 3px solid rgb(199, 199, 236);
+    margin: 3px;
+}
+input{
+    margin: 3px;
+    background: #97d3ce;
+    border: 0px;
+    border-bottom: 1px solid black;
+    font-size: 10px;
+}
+label{
+    margin: 3px;
+    font-size: 10px;
+}
+#col{
+
+}
+#hh{
+    position: relative;
+    left: -30px;
+    margin: 3px;
+    background: rgb(255, 81, 0);
+    color: white;
+    width: 230px;
+    height: 30px;
+    text-align: center;
+    vertical-align: center;
+}
+#col div input{
+    height: 15px;
+    width: 80px;
+}
+div{
+    margin: auto;
+}

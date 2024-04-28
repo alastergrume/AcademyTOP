@@ -1,0 +1,43 @@
+table{
+	border: 10px solid black;
+	border-collapse: separate; /* collapse - объединяет границы ячеек, убирая отступы между элемента*/
+	border-spacing: 50px; /*отсутп между элементами*/
+	background-color: #cccccc;
+	background-image: url('sun.jpg');
+}
+td{
+	border: 5px solid blue;
+	width: 150px;
+	text-align: center;
+	height: 50px;
+	vertical-align: middle;
+}
+tr{
+	background-color: #853838;
+}
+#tr_uniqe{
+	width: 250px;
+	height: 100px;
+	background-color: #3ab170;
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1200px-SNice.svg.png');
+	background-size: contain; /*растягивате по ячеке рисунок*/
+	background-repeat: no-repeat; /*отменяет повоторение картинки*/
+	background-position: center; /*настраивает на позицию картинки по центру*/
+}
+.tr_uniqe{
+	width: 50px;
+	height: 150px;
+	color: red;
+}
+tr:nth-child(1){
+	background: #666;
+	color: #fff;
+} 
+tr:nth-child(3){
+	background: #666;
+	color: #fff;
+} 
+tr:nth-child(5){
+	background: #666;
+	color: #fff;
+} 

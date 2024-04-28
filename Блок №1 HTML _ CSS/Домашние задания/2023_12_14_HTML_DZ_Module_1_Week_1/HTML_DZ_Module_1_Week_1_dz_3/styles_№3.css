@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap'); /*Подключенный шрифт*/
+
+body{/*цвет и шрифт всего документа*/
+	background: #cad2e0;
+	font-family: 'Rubik', sans-serif;
+}
+div{/*фон кодовых строк*/
+	background: #a6b3bd;
+}
+code {/*фон блока с кодом*/
+  background: #a6b3bd;
+  font-family: 'Rubik', sans-serif;
+}
+.text_style{/*подсветка кода*/
+	color: #8c1111;
+}
+h4{/*настройка контента*/
+	font-weight: 500; /*определяет жирность шрифта*/
+	font-family: 'Rubik', sans-serif;
+	line-height:1.5; /*Межстрочный интревал*/
+}
+footer{
+	font-size: 15px; /*размер шрифта*/
+	font-family: 'Rubik', sans-serif;
+}
+/*В посещенной и в непосещенной ссылке настроен один текст, чтобы стиль соответтсвовал заданию*/
+a:link{/*непосещенная*/
+	text-decoration: none;
+	background: #a6b3bd;
+	color: #065861;
+}
+a:visited{/*посещенная*/
+	text-decoration: none;
+	background: #a6b3bd;
+	color: #065861;
+}
+a:hover{/*над которой находится указатель мыши*/
+	text-decoration: underline;
+	background: #a6b3bd;
+	color: blue;
+}

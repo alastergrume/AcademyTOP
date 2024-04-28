@@ -1,0 +1,46 @@
+
+Directories---------------------------------------
+	.idea		12		14		file_2		Modules		__pycache__		Сортировка шела		inspectionProfiles	
+Files---------------------------------------------
+	04.03 Практика.py
+	04.03 работа с файлами.py
+	06.03 Архивация файлов.py
+	06.03 часть два.py
+	07.02.py
+	19.02 Урок.py
+	21.02 часть два.py
+	26.02 Кортеж.py
+	def2.py
+	dictionary.txt
+	main.py
+	module.py
+	my arhiv.zip
+	skiper.txt
+	text
+	text.rar
+	text.txt
+	text1.txt
+	Домашка к 21.02 часть 2.py
+	Домашка полиндром.py
+	Массив.py
+	Практика 07.02.py
+	Практика 12.02.py
+	Практика 24.01 третья часть.py
+	практика 26.02 вторая часть.py
+	Практика 26.02 Множества и кортежи.py
+	Практика 28.02.py
+	Практика 29.01.py
+	Практика 31.01.py
+	Словари 28.02.py
+	сортировка шела 21.02.py
+	.gitignore
+	misc.xml
+	modules.xml
+	pythonProject17.iml
+	workspace.xml
+	profiles_settings.xml
+	02.py
+	14.02.py
+	module.py
+	def2.cpython-39.pyc
+	module.cpython-39.pyc

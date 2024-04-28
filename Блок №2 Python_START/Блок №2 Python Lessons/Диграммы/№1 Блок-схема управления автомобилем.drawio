@@ -1,0 +1,130 @@
+<mxfile host="Electron" modified="2024-01-08T18:13:58.299Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="eH3qy2FcN9F8oWY9A-Zn" version="22.1.16" type="device">
+  <diagram id="t3r8VkWGhu6oz5RlHdWX" name="Страница — 1">
+    <mxGraphModel dx="724" dy="838" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zUiKxc7bckkszODXxfpt-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zUiKxc7bckkszODXxfpt-2" target="zUiKxc7bckkszODXxfpt-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-2" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Начало&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="280" y="30" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="zUiKxc7bckkszODXxfpt-22" target="zUiKxc7bckkszODXxfpt-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-22" value="Пристегнуться ремнем безопасности" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="360" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zUiKxc7bckkszODXxfpt-23" target="zUiKxc7bckkszODXxfpt-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-23" value="Запуск двигателя" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="360" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="zUiKxc7bckkszODXxfpt-32" target="zUiKxc7bckkszODXxfpt-40" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-32" value="Процесс дивжения" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="325" y="300" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zUiKxc7bckkszODXxfpt-40" target="zUiKxc7bckkszODXxfpt-63" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600.0183333333334" y="464.48" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-46" value="перекресток" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zUiKxc7bckkszODXxfpt-45" vertex="1" connectable="0">
+          <mxGeometry x="-0.0144" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="zUiKxc7bckkszODXxfpt-40" target="zUiKxc7bckkszODXxfpt-65" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-66" value="Светофор" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zUiKxc7bckkszODXxfpt-48" vertex="1" connectable="0">
+          <mxGeometry x="-0.1194" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-40" value="Оценка дорожной ситуации" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="340" y="427.25" width="160" height="112.75" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zUiKxc7bckkszODXxfpt-58" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-58" value="Вращение рулевого колеса в нужную сторону" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="640" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-69" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="zUiKxc7bckkszODXxfpt-63" target="zUiKxc7bckkszODXxfpt-58" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-63" value="Осуществление поворота" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="640" y="453.63" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zUiKxc7bckkszODXxfpt-65" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-65" value="Остановка движения, ожидание включения разрешающего сигнала светофора&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="90" y="433.63" width="160" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-91" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" target="zUiKxc7bckkszODXxfpt-83" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="940" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cUwWFjSt0VOQxvUifxxY-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zUiKxc7bckkszODXxfpt-81" target="rZiNsfzEBIiACE4hs2jV-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-81" value="Завершение&lt;br&gt;процесса &lt;br&gt;движения, после достижения места назначения" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=0;direction=west;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="260" y="680" width="320" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zUiKxc7bckkszODXxfpt-83" target="zUiKxc7bckkszODXxfpt-87" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-83" value="Выключение двигателя" style="whiteSpace=wrap;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="360" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-87" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Конец&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="270" y="1060" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rZiNsfzEBIiACE4hs2jV-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zUiKxc7bckkszODXxfpt-40" target="zUiKxc7bckkszODXxfpt-53" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="540" as="sourcePoint" />
+            <mxPoint x="420" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZiNsfzEBIiACE4hs2jV-2" value="отсутствие перекрестков &lt;br&gt;и светофоров" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="rZiNsfzEBIiACE4hs2jV-1" vertex="1" connectable="0">
+          <mxGeometry x="-0.103" relative="1" as="geometry">
+            <mxPoint y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rZiNsfzEBIiACE4hs2jV-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="zUiKxc7bckkszODXxfpt-53" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zUiKxc7bckkszODXxfpt-53" value="Движение вперед" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="360" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cUwWFjSt0VOQxvUifxxY-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rZiNsfzEBIiACE4hs2jV-5" target="rZiNsfzEBIiACE4hs2jV-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rZiNsfzEBIiACE4hs2jV-5" value="Выбор места парковки" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;rounded=0;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="360" y="780" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rZiNsfzEBIiACE4hs2jV-8" value="Остановка" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;rounded=0;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="360" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

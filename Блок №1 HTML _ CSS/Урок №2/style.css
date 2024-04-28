@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&family=Kenia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+body{
+	background: /*rgb (222,0,22);/*Цвет фона в системе RGB*/
+	color: /*#d45bc0; /*Цвет текста в системе HEX*/
+}
+h1{
+	color: red;
+	font-family: 'Kenia', sans-serif;
+}
+#karti {
+	display: flex; /*inline-block альтернатива блоки становятся в ряд*/ 
+	
+}
+.karti2 {
+	margin: 20px; /*внешний отступ*/
+	padding: 2px; /*внутренний отступ*/
+	background: gray;
+	widht: 50px;/*ширина*/
+	height: 50px;/*высота*/
+	text-align: center;/*расположение контента*/
+	line-height: 50px;/*смещение сроки*/
+	font-size: 50px;/*размер шрифта*/
+}
+li{
+	font-family: 'Kanit', sans-serif;
+}
+
+footer{
+	font-family: 'Pacifico', cursive;
+}
+footer div span{
+	font-family: 'Shadows Into Light', cursive;
+}
+ul, ol{
+	padding: 15px;
+	margin: 3px;
+	background: #2e5cb8;
+	list-style: none;
+}
+li::marker{ /*функция для маркера, римских цифр в списке*/
+	color: red;
+	font-size: 18px;
+	font-family: 'Kenia', sans-serif;
+}
+ul li, ol li{ /*объединение нескольких элементов и применение к ним указанны параметров*/
+	padding: 5px;
+	margin: 5px 15px;
+	background: #3bf0fa;
+}
+
+ol{list-style: upper-roman; /*Стиль циферок*/
+}
+ul li a, ol li a{
+	text-decoration: none;
+	color: black;
+}

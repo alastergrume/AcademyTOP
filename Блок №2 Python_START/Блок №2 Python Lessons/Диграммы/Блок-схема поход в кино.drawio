@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net" modified="2023-12-19T16:05:41.264Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0" etag="ToX0WjKjeYNsQbOW7tZJ" version="22.1.11" type="device">
+  <diagram name="Страница — 1" id="iiXBhMtPfcwIjSY_k_dl">
+    <mxGraphModel dx="1769" dy="1059" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="33Xex7XdTePiiyH9xqwK-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-1" target="33Xex7XdTePiiyH9xqwK-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-1" value="Начало" style="rounded=1;whiteSpace=wrap;html=1;fontSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="290" y="40" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-2" value="Конец" style="rounded=1;whiteSpace=wrap;html=1;fontSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="292.5" y="665" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-4" target="33Xex7XdTePiiyH9xqwK-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-4" value="Просмотр текущих фильмов в кинотеатре" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="255" y="130" width="275" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-5" target="33Xex7XdTePiiyH9xqwK-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-5" value="Выбор фильма" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="332.5" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-6" target="33Xex7XdTePiiyH9xqwK-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-6" value="Покупка билетов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-7" target="33Xex7XdTePiiyH9xqwK-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-7" target="33Xex7XdTePiiyH9xqwK-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-7" value="Если есть билет" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="307.5" y="310" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-19" target="33Xex7XdTePiiyH9xqwK-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-19" value="Выбор альтернативы" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="560" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-22" target="33Xex7XdTePiiyH9xqwK-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-22" value="Поехать в кинотеатр" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-24" target="33Xex7XdTePiiyH9xqwK-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-24" value="Посмотреть фильм" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-26" target="33Xex7XdTePiiyH9xqwK-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-26" value="Вернутся домой" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-30" target="33Xex7XdTePiiyH9xqwK-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-30" value="Начало" style="rounded=1;whiteSpace=wrap;html=1;fontSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="862" y="40" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-31" target="33Xex7XdTePiiyH9xqwK-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-31" value="Просмотр текущих фильмов в кинотеатре" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="902" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-32">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="962" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-32" value="Проверка билетов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="902" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-33" target="33Xex7XdTePiiyH9xqwK-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-33" value="Пока не выбран фильм" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="902" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="33Xex7XdTePiiyH9xqwK-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="962" y="460" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-35" value="Конец" style="rounded=1;whiteSpace=wrap;html=1;fontSize=26;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="862" y="860" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-37" target="33Xex7XdTePiiyH9xqwK-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-37" value="Покупка билетов" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="902" y="500" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-39" target="33Xex7XdTePiiyH9xqwK-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-39" value="Поехать в кинотеатр" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="902" y="590" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-41" target="33Xex7XdTePiiyH9xqwK-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-41" value="Посмотреть фильм" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="902" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="33Xex7XdTePiiyH9xqwK-43" target="33Xex7XdTePiiyH9xqwK-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-43" value="Вернутся домой" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="902" y="770" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="33Xex7XdTePiiyH9xqwK-50" value="Конец цикла" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="902" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

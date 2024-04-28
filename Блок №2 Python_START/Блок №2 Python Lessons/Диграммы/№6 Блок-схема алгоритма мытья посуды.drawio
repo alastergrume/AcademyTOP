@@ -1,0 +1,182 @@
+<mxfile host="Electron" modified="2024-01-08T18:01:33.687Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.16 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="oF6GvvSKKnF7n0TX8PGU" version="22.1.16" type="device">
+  <diagram id="D8fkURHyANMpih5rnkmA" name="Страница — 1">
+    <mxGraphModel dx="1207" dy="1397" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="11rlWMmekfV-KqHWhoUA-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0B4D6A;" parent="1" source="11rlWMmekfV-KqHWhoUA-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11rlWMmekfV-KqHWhoUA-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Начало&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;labelBackgroundColor=none;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="28" y="40" width="772" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-1" target="F8-dJ65_b4ndUQtegK6g-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-1" value="&lt;p style=&quot;text-indent: -18pt; font-size: 16px;&quot; class=&quot;MsoListParagraph&quot;&gt;Собираем грязную посуду в раковину&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="140" width="448" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-2" target="F8-dJ65_b4ndUQtegK6g-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-2" value="&lt;p style=&quot;text-indent: -18pt; font-size: 16px;&quot; class=&quot;MsoListParagraph&quot;&gt;Включаем воду&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="220" width="448" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-3" target="F8-dJ65_b4ndUQtegK6g-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-3" value="&lt;p style=&quot;text-indent: -18pt; font-size: 16px;&quot; class=&quot;MsoListParagraph&quot;&gt;Смачиваем губку&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="300" width="448" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-4" target="F8-dJ65_b4ndUQtegK6g-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-4" value="&lt;p style=&quot;text-indent: -18pt; font-size: 16px;&quot; class=&quot;MsoListParagraph&quot;&gt;Наносим моющее средство на губку&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="380" width="448" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-5" target="F8-dJ65_b4ndUQtegK6g-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-5" value="&lt;p style=&quot;text-indent: -18pt; font-size: 16px;&quot; class=&quot;MsoListParagraph&quot;&gt;Напениваем губку&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="460" width="448" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="416" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-13" value="Мытье посуды" style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="102" y="540" width="628" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="F8-dJ65_b4ndUQtegK6g-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="416" y="660" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-16" target="F8-dJ65_b4ndUQtegK6g-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-16" value="Смываем загрязнения под струей воды" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="680" width="448" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-17" target="F8-dJ65_b4ndUQtegK6g-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-17" value="Берем прибор в одну руку, губку в другую руку" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="740" width="448" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-18" target="F8-dJ65_b4ndUQtegK6g-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-18" value="С помошью губки смываем грязь с внутренней и наружной стороны столового прибора" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="800" width="448" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-19" target="F8-dJ65_b4ndUQtegK6g-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-19" value="Кладем губку на раковину" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="860" width="448" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-20" target="F8-dJ65_b4ndUQtegK6g-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-20" value="Берем столовый прибор в обе руки" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="920" width="448" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-21" target="F8-dJ65_b4ndUQtegK6g-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-21" value="Смываем загрязнения и пену со всех поверхностей столового прибора" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="980" width="448" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-22" target="F8-dJ65_b4ndUQtegK6g-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="1330" />
+              <mxPoint x="760" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-39" value="ДА" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="F8-dJ65_b4ndUQtegK6g-38">
+          <mxGeometry x="-0.7457" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-22" target="F8-dJ65_b4ndUQtegK6g-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414" y="1370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-42" value="НЕТ" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" vertex="1" connectable="0" parent="F8-dJ65_b4ndUQtegK6g-40">
+          <mxGeometry x="-0.2441" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-22" value="Остались загрязнения?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1240" width="228" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-41" target="F8-dJ65_b4ndUQtegK6g-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-41" value="Ставим столовый прибор в сушку" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="188" y="1470" width="452" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-44" target="F8-dJ65_b4ndUQtegK6g-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="414" y="1130" />
+              <mxPoint x="414" y="1130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-44" value="Проверяем на наличие остатков загрязнений" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="1050" width="448" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-47" target="F8-dJ65_b4ndUQtegK6g-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-47" value="Мытье посуды. &lt;br style=&quot;font-size: 24px;&quot;&gt;Выход когда все столовые приборы закончились." style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipV=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="104" y="1560" width="620" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-48" target="F8-dJ65_b4ndUQtegK6g-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-48" value="Промываем губку под струей воды" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="188" y="1660" width="452" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-55" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-50" target="F8-dJ65_b4ndUQtegK6g-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-50" value="Отжимаем губку" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="188" y="1750" width="452" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-51" target="F8-dJ65_b4ndUQtegK6g-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-51" value="Кладем губку на место" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="188" y="1840" width="452" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-52" target="F8-dJ65_b4ndUQtegK6g-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-52" value="Выключаем воду" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="188" y="1930" width="452" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="F8-dJ65_b4ndUQtegK6g-53" target="F8-dJ65_b4ndUQtegK6g-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-53" value="Вытираем руки" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="188" y="2020" width="452" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-60" value="&lt;font style=&quot;font-size: 36px;&quot;&gt;Конец&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="30" y="2130" width="768" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="F8-dJ65_b4ndUQtegK6g-63" value="Берем столовый прибор в руки" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="192" y="620" width="448" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!--команда (декларация), которая говорит браузеру, что в документе используется HTML5-->
+<html>
+	<head>
+	<link rel='stylesheet' href='styles_№3.css'> <!--Подключенный файл CSS-->
+	<meta charset="utf-8" /> <!--Метаданные, говорят об использумой кодировке текста в проекте. 
+	Считается хорошей практикой укаpывать кодировку, которую должен использовать браузер при чтении кода-->
+	<meta name='autor' content='Калинин Иван'> <!--Автор проекта-->
+	<title>Задание №3</title> <!--отображает на вкладке сайта его название-->
+	</head>
+	<header>
+		<h1><center> HTML Tutorial <center></h1>
+		
+		<hr align='center' size='3' color='#a6b3bd'><!--Это горизонтальная линия-->
+	
+	</header>
+	<body>
+		<h2><center>What is HTML?</center></h2>
+
+		<h4><b>Hypertext Markup Language (<abbr title="Hypertext Markup Language">HTML</abbr>)</b> is the standard markup language 
+		for creating web pages and web<br>applications.</h4>
+		<!--В данном абзаце используется тег <abbr></abbr> для вывода анотации к слову, наводишь указателем мыши на слово, а там выводится информация из параметра title-->
+		<h4>Web browsers receive <abbr title="Hypertext Markup Language">HTML</abbr> 
+		documents from a web server or from	local storage and render the documents into 
+		multimedia web pages. <abbr title="Hypertext Markup Language">HTML</abbr> describes the structure of a web page semantically 
+		and originally included cues for the appearance of the document.</h4>
+		
+		<h4><abbr title="Hypertext Markup Language">HTML</abbr> elements are the building blocks of 
+		<abbr title="Hypertext Markup Language">HTML</abbr> pages. 
+		With <abbr title="Hypertext Markup Language">HTML</abbr> constructs, 
+		images and other objects such as interactive forms may be embedded into 
+		the rendered page. <abbr title="Hypertext Markup Language">HTML</abbr> provides a means to create structured documents 
+		by denoting structural semantics for text such as headings, paragraphs, 
+		lists, links, quotes and other items. <abbr title="Hypertext Markup Language">HTML</abbr> elements are delineated by <i>tags</i>,
+		written using angle brackets. Tags such as <code class='text_style'>&ltimg /&gt</code> and <code class='text_style'>&ltinput /&gt</code> directly 
+		<!--Тэг <code></code> помогает указывать в тексте строчки кода какого либо языка. При указании HTML кода необходимо вместо знаков "<" и ">" использовать "&lt" и "&gt" соответственно
+		Так же используется класс для настройки стиля и подсветки-->
+		introduce content into the page. Other tags such as <code class='text_style'>&ltp&gt</code> surround and provide 
+		information about document text and may include other tags as sub-elements. 
+		Browsers do not display the <abbr title="Hypertext Markup Language">HTML</abbr> tags, but use them to interpret the content
+		of the page.</h4>
+		
+		<hr align='center' size='3' color='#a6b3bd'> <!--Это горизонтальная линия-->
+		
+		<h2><center>Markup</center></h2> 
+
+		<h4><abbr title="Hypertext Markup Language">HTML</abbr> markup consists of several key components, including those called 
+		<i>tags</i> (and their <i>attributes</i>), character-based <i>data types, character references</i> and <i>entity references</i>. 
+		<abbr title="Hypertext Markup Language">HTML</abbr> tags most commonly come in pairs like <code class='text_style'>&lth1&gt</code> 
+		and <code class='text_style'>&lt/h1&gt</code>, 
+		although some represent <i>empty elements</i> and so are unpaired, for example 
+		<code class='text_style'>&ltimg&gt</code>. The first tag in such a pair is the <i>start tag</i>, 
+		and the second is the <i>end tag</i> (they are also called <i>opening tags</i> and <i>closing tags</i>).
+		</h4>
+		<h4>Another important component is the <abbr title="Hypertext Markup Language">HTML</abbr> <i>document type declaration</i>, 
+		which triggers standards mode rendering.
+		</h4>
+		<h4>The following is an example of the classic "Hello, World!" program:
+		</h4>
+		
+		<div>
+		<pre><code>	<!--если использовать тэг <code> без заключения его в тэг <pre>, 
+		то тогда строчки кода будут записаны в одну строчку, тэг <pre> позволяет отображать текст кода 
+		с оригинальными переносами-->
+  <span class='text_style'>&lt!DOCTYPE html&gt</span> <!--Тэг <span> нужен для подтягивания класса подсветки синтаксиса кода-->
+  <span class='text_style'>&lthtml&gt</span>
+  	  <span class='text_style'>&lthead&gt</span>
+		  <span class='text_style'>&lttitle&gt</span>This is a title<span class='text_style'>&lt/title&gt</span>
+	  <span class='text_style'>&lt/head&gt</span>
+	  <span class='text_style'>&ltbody&gt</span>
+		  <span class='text_style'>&ltp&gt</span>Hello world!<span class='text_style'>&lt/p&gt</span>
+	  <span class='text_style'>&lt/body&gt</span>
+  <span class='text_style'>&lt/html&gt</span>
+		</code></pre>			
+		</div>
+  			
+		<hr align='center' size='3' color='#a6b3bd'> <!--Это горизонтальная линия-->
+	
+	</body>
+	
+	<footer>	
+		<b>Tags:</b> <!--Дальше идут ссылки <a></a>, которые ссылаются на ту же самую страницу благодаря параметру href='#'-->
+		<a href='#'>CodingScripting</a> 
+		<a href='#'>head</a> 
+		<a href='#'>HTML</a> 
+		<a href='#'>Introduction to HTML</a> 
+		<a href='#'>Landing</a> 
+		<a href='#'>Links semantics</a> 
+		<a href='#'>Structure</a> 
+		<a href='#'>Text</a>
+	</footer>
+	
+</html>

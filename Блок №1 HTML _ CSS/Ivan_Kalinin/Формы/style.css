@@ -1,0 +1,28 @@
+form{
+    width: 300px;
+    padding:9px;
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+    margin: 5px;
+}
+#gender1, #gender2{
+    padding: 0px;
+    margin: 0px;
+    width: auto;
+    text-align: left;
+}
+text{
+    vertical-align: top;
+}
+input, textarea{
+    font: 16px sans-serif;
+    width: 200px;
+    border: 1px solid #777;
+}
+input:focus, textarea:focus{
+    border-color: red;
+}
+div{
+    padding: 10px;
+}

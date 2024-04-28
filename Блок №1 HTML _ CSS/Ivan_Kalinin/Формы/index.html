@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Forms</title>
+    </head>
+    <body>
+        <h2>Поисковая строка...</h2>
+        <form action="D:\Ivan_Kalinin\Практика 3" method="POST">
+            <input type="text"/> <br>
+            <input type="submit" value="Search"/>
+            <input type="reset" value="Clear"/>           
+        </form>
+        <form>
+            <h3> Форма регистрации </h3>
+            <div>
+                <label for="uname">Name: </label>
+                <input type="text" id="uname" name="userName"/>
+            </div>
+            <div>
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" name="userEmail"/>
+            </div>
+            <div>
+                <label for="message">Message: </label>
+                <textarea id="message" name="userMessage"></textarea> <!--текстовое поле для ввода сообщения-->
+            </div>
+            <div>
+                <input type="submit" value="Отправка сообщений"/> <!--сабмит нужен для того-чтобы напистаь внутри кнопки тескт-->
+            </div>
+            <div>
+                <label> Gender </label><br>
+                <input type="radio" value="male" id="gender1" name="sex"/>
+                <label for="gender1"> Male </label>
+                <input type="radio" value="female" id="gender2" name="sex"/>
+                <label for="gender2"> Female </label>
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" id="password" name="userPassword"/>
+            </div>
+            <div>
+            <span> Регион </span>
+            <select id="nameR" name="NameR">
+                <option> Пермский край </option>
+                <option> Самарская область </option>
+                <option> Владивосток </option>
+                <option> Краснодарский край </option>
+                <option> Ямало-ненецкий автономный округ </option>
+            </select>
+            </div>
+            <div>
+                <label for="userbirthday" > Birthday </label>
+                <input type="date" name="birthday" id="userbirthday"/>
+            </div>
+            <div>
+                <label for="blog"> Blog: </label>
+                <input type="url" name="blog" id="blog"/>
+            </div>
+            <div>
+                <label for="tel"> Tel: </label>
+                <input type="tel" name="tel" id="tel"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"/>
+                <br>
+                <p> Format: 000-000-00-00 </p>
+            </div>
+            <div>
+                <label for="volume"> Volume:</label>
+                <input type="range" name="volume" id="volume"
+                min="0" max="100" step="0.01"/>
+            </div>
+        </form>
+    </body>
+</html>

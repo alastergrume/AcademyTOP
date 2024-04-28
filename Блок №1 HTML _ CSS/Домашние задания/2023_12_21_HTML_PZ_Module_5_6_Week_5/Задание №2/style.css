@@ -1,0 +1,49 @@
+/* .menu_bar{
+    display:flex;
+    position: absolute;
+} */
+li{
+    text-align: left;
+    border-bottom: 1px solid #555;
+    display: inline;
+    vertical-align: center;
+
+}
+li  a{
+    display: block;
+    width: 200px;
+    padding: 2px 2px;
+    text-decoration: none;
+    text-align: left;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    border: 1px solid #555; /*каемочка*/
+    width: 2.7%; /*этот код 4 строчки включительно прилипляет панель слева*/ /*ширина свернутого меню*/
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+    transition: 0.5s;
+}
+li a:hover{ 
+    background-color: #555;
+    color: white;
+}
+ul:hover{
+    width: 8%; /*ширина развернутого меню*/
+}
+.content{
+    padding-bottom: 100px;
+    border-left: 10px;
+    padding-left: 10px;
+    padding-top: 0px;
+    margin-left: 50px;
+}
+ion-icon{
+    width: 45px;
+    height: 45px;
+}

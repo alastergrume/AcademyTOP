@@ -1,0 +1,12 @@
+============= Работа с сетями ===============
+Посмотреть ip адрес
+ip a
+
+
+редактирование хостов
+nano /etc/hosts
+10.128.0.19 prox.ru-central1.internal prox
+
+
+Выведет публичный IP Yandex Cloude
+curl ifconfig.me

@@ -1,0 +1,117 @@
+Video Tutorial
+https://www.youtube.com/watch?v=3M-5KX0wN8I
+
+Doc Link:
+https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm
+
+
+Introduction
+The installation of a supported Proxmox VE server should be done via bare-metal ISO installer. In some cases it makes sense to install Proxmox VE on top of a running Debian Bookworm 64-bit, especially if you want a custom partition layout.
+
+For this How-To any official Bookworm installation medium should work.
+
+Install a standard Debian Bookworm (amd64)
+Install a standard Debian Bookworm, for details consider the Debian installation guide, and configure a static IP.
+
+Note: The Debian installer performs network configuration by IPv6 autoconfiguration and DHCP by default, if available. To force manual network configuration in the UEFI installer, press E and add netcfg/disable_autoconfig=true to the Linux command line. For the BIOS installer, select the Help entry and start the installation by typing installgui netcfg/disable_autoconfig=true. For further details, see the Debian installer documentation.
+
+It is recommended to only install the "standard system utilities" and "SSH server" package selection, as Proxmox VE brings its own packages for QEMU and LXC. A desktop environment is not necessary.
+
+Add an /etc/hosts entry for your IP address
+The hostname of your machine must be resolvable via /etc/hosts.
+
+This means that in /etc/hosts you need one of the following entries for your hostname:
+
+1 IPv4 or
+1 IPv6 or
+1 IPv4 and 1 IPv6
+Note: This also means removing the address 127.0.1.1 that might be present as default.
+
+For instance, if your IP address is 192.168.15.77, and your hostname prox4m1, then your /etc/hosts file could look like:
+
+127.0.0.1       localhost
+192.168.15.77   prox4m1.proxmox.com prox4m1
+
+# The following lines are desirable for IPv6 capable hosts
+::1     localhost ip6-localhost ip6-loopback
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+You can test if your setup is ok using the hostname command:
+
+hostname --ip-address
+192.168.15.77 # should return your IP address here
+Install Proxmox VE
+Adapt your sources.list
+Add the Proxmox VE repository:
+
+echo "deb [arch=amd64] http://download.proxmox.com/debian/pve bookworm pve-no-subscription" > /etc/apt/sources.list.d/pve-install-repo.list
+Add the Proxmox VE repository key as root (or use sudo):
+
+wget https://enterprise.proxmox.com/debian/proxmox-release-bookworm.gpg -O /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg 
+# verify
+sha512sum /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg 
+7da6fe34168adc6e479327ba517796d4702fa2f8b4f0a9833f5ea6e6b48f6507a6da403a274fe201595edc86a84463d50383d07f64bdde2e3658108db7d6dc87 /etc/apt/trusted.gpg.d/proxmox-release-bookworm.gpg 
+Update your repository and system by running:
+
+apt update && apt full-upgrade
+Install the Proxmox VE Kernel
+First you need to install and boot the Proxmox VE kernel, as some packages depend on specific kernel compile flags to be set or feature extensions (e.g., for apparmor) to be available.
+
+apt install proxmox-default-kernel
+
+systemctl reboot
+Install the Proxmox VE packages
+Install the Proxmox VE packages
+
+apt install proxmox-ve postfix open-iscsi chrony
+Note that you can replace chrony with any other NTP daemon, but we recommend against using systemd-timesyncd on server systems, and the ntpsec-ntpdate option might conflict with bringing up networking on boot on some hardware. Configure packages which require user input on installation according to your needs.
+
+If you have a mail server in your network, you should configure postfix as a satellite system. Your existing mail server will then be the relay host which will route the emails sent by Proxmox VE to their final recipient.
+
+If you don't know what to enter here, choose local only and leave the system name as is.
+
+Remove the Debian Kernel
+Proxmox VE ships its own kernel and keeping the Debian default kernel can lead to trouble on upgrades, for example, with Debian point releases. Therefore, you must remove the default Debian kernel:
+
+apt remove linux-image-amd64 'linux-image-6.1*'
+Update and check grub2 config by running:
+
+update-grub
+Recommended: Remove the os-prober Package
+The os-prober package scans all the partitions of your host to create dual-boot GRUB entries. But the scanned partitions can also include those assigned to virtual machines, which one doesn't want to add as boot entry.
+
+If you didn't install Proxmox VE as dual boot beside another OS, you can safely remove the os-prober package:
+
+apt remove os-prober
+Connect to the Proxmox VE web interface
+Connect to the admin web interface (https://your-ip-address:8006). If you have a fresh install and have not added any users yet, you should select PAM authentication realm and login with root user account.
+
+Create a Linux Bridge
+Create a Linux Bridge called vmbr0, and add your first network interface to it.
+
+The recommended default configuration can be adapted from the example given in the documentation. See the default configuration using a bridge.
+
+Upload Subscription Key
+The Proxmox VE enterprise repository is set up automatically during the installation as it's the recommended repository for stable, enterprise usage.
+
+Access to that repository is one of the benefits of a Proxmox VE subscription, see this forum thread for more info about why you should get one.
+
+You should upload your subscription key now in the web interface, then you can remove the no-subscription repository added for installation.
+
+rm /etc/apt/sources.list.d/pve-install-repo.list
+Troubleshooting
+PVE Kernel fails to boot
+If the kernel fails to boot with error: bad shim signature., make sure Secure Boot is disabled.
+
+resolv.conf gets overwritten
+The PVE GUI expects to control DNS management and will no longer take its DNS settings from /etc/network/interfaces. Any package that auto-generates (overwrites) /etc/resolv.conf will cause DNS to fail, e.g. packages 'resolvconf' for IPv4 and 'rdnssd' for IPv6.
+
+ipcc_send_rec[1] failed
+If you see messages like ipcc_send_rec[1] failed: Connection refused then you should review your /etc/hosts file according to the instructions above.
+
+Network Fails on Boot Due to NTPsec Hook
+Some users reported that after the upgrade their network failed to come up cleanly on boot, but worked if triggered manually (e.g., using ifreload -a), when ntpsec was installed.
+
+We're still investigating for a definitive root cause, but it seems that an udev hook which the /etc/network/if-up.d/ntpsec-ntpdate might hang on some hardware, albeit due to changes not directly related to ntpsec.
+
+Since the chrony NTP daemon is used as default for new installations since Proxmox VE 7.0 the simplest solution might be switching to that via apt install chrony.

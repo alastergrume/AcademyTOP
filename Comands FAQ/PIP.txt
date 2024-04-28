@@ -1,0 +1,14 @@
+Обновление PIP глобально в Windows
+https://python-scripts.com/upgrade-pip-windows?ysclid=ltbk6bli85457500694
+
+открыть CMD
+cd\
+cd C:\Users\User\AppData\Local\Programs\Python\Python311\
+python -m pip install --upgrade pip
+
+проверка версии PIP:
+
+открыть CMD
+cd\
+cd C:\Users\User\AppData\Local\Programs\Python\Python311\Scripts
+pip --version

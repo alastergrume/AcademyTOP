@@ -1,0 +1,20 @@
+import requests
+from requests.auth import HTTPBasicAuth
+
+# Ваши учетные данные
+username = 'ваш_логин'
+password = 'ваш_пароль'
+
+# URL, к которому вы хотите обратиться
+url = 'http://example.com/api/data'
+
+# Выполнение запроса с базовой авторизацией
+response = requests.get(url, auth=HTTPBasicAuth(username, password))
+
+# Проверка статуса ответа
+if response.status_code == 200:
+    # Успешный запрос, обработка данных
+    print("Успешно:", response.text)
+else:
+    # Обработка ошибок
+    print("Ошибка:", response.status_code)

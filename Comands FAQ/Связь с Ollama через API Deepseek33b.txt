@@ -1,0 +1,32 @@
+Для работы с API требуется знание Python и библиотеки `requests`. Вот пример того, как вы можете написать функцию, которая будет отправлять запрос к API Ollama:
+
+```python
+import requests
+import json
+
+def send_api_request(url, data):
+    headers = {'Content-Type': 'application/json'}
+    
+    try:
+        response = requests.post(url, data=json.dumps(data), headers=headers)
+        
+        # Проверка статус кода ответа. 200 означает успешный запрос.
+        if response.status_code == 200:
+            return json.loads(response.text)
+        else:
+            print("Запрос не удался с кодом статуса", response.status_code)
+    except requests.exceptions.RequestException as e:
+        # Если возникло исключение, выведем его. 
+        # Для более подробного анализа ошибок может потребоваться дополнительная обработка.
+        print(e)
+        
+# Пример использования функции:
+data = {"key": "value"}  # Замените на реальные данные, которые вы хотите отправить
+url = 'http://example.com'  # Замените на URL вашего API
+response_data = send_api_request(url, data)
+print(response_data)
+```
+
+Вам нужно заменить `"key": "value"` и `'http://example.com'` на реальные данные для вашего API. Это может быть JSON-объект, который вы хотите отправить, а также URL, по которому доступен ваш API.
+
+Пожалуйста, убедитесь, что у вас есть необходимые права для работы с этим API и ознакомьтесь с любыми соглашениями об использовании или другими требованиями к безопасности, предусмотренными в документации.

@@ -1,0 +1,15 @@
+~$ yc compute instance list - Информация о виртуальных машинах YC
+
+~$ yc compute instance stop agent-server - Остановка вритуальной машины
+где: agent-server NAME vm
+
+~$ yc compute instance start agent-server - Запуск вирутальной машины
+
+~$ yc compute instance get agent-server - Узнать публичный IP-Адресс вирутальной машины
+
+for example:	
+	one_to_one_nat:
+  		address: 130.193.32.90
+  		ip_version: IPV4
+
+~$ yc compute instance list | grep agent-server | awk '{print $10}' - Узнать IP адресс

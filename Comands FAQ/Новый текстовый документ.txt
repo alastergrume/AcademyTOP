@@ -1,0 +1,22 @@
+Просмотреть порт
+sudo lsof -i :<номер_порта>
+
+Убить процесс
+kill -9 :PID
+
+-9 принудительно
+
+curl http://localhost:11434/api/generate -d '{"model": "dolphin-phi", "prompt": "Why is the sky blue?"}'
+
+echo '{
+  "model": "llama2",
+  "messages": [
+    {"role": "user", "content": "why is the sky blue?"},
+    {"role": "assistant", "content": "due to rayleigh scattering."},
+    {"role": "user", "content": "how is that different than mie scattering?"}
+  ]
+}' > request.json
+
+scp request.json root@158.160.118.40:/home/agent-server/request.json
+
+ssh root@158.160.118.40 sh -c 'curl -X POST "http://localhost:11434/api/chat" -H "Content-Type: application/json" -d @/home/agent-server/request.json'

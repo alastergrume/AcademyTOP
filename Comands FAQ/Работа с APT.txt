@@ -1,0 +1,31 @@
+https://omgubuntu.ru/kak-ispravit-oshibku-e-could-not-get-lock-var-lib-dpkg-lock-v-ubuntu-linux/
+
+Устранение неполадки: «Unable to acquire the dpkg frontend lock»
+Это когда случайно закрыл терминал при обновлении системы
+Пример ошибки:
+abhishek@nuc:~$ sudo apt install grub-customizer 
+E: Could not get lock /var/lib/dpkg/lock-frontend - open (11: Resource
+temporarily unavailable) 
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend),
+is another process using it?
+
+------------------Команды--------------------
+
+ps aux | grep -i apt - Показывает все процессы связанные с apt или apt-get
+
+sudo lsof /var/lib/dpkg/lock-frontend - Показывает процесс, который блокирует файл lock-frontend
+
+
+Если вы видите значение «unattende» в столбце COMMAND, это значит, что выполняются 
+автоматические обновления безопасности. Вам следует дождаться завершения процессов. 
+По сути, это то, что я описывал в методе 0, но вы могли его пропустить.
+
+Если значение COMMAND какое-то другое, вы можете убить процесс, а затем удалить файл блокировки.  
+Идентификатор процесса вы найдете в столбце PID. Используйте этот PID, чтобы убить процесс. 
+После этого удалите файл блокировки и запустите команду обновления, чтобы проверить, 
+исправили ли вы проблему.
+
+
+sudo kill -9 PID 
+sudo rm /var/lib/dpkg/lock-frontend 
+sudo apt update 

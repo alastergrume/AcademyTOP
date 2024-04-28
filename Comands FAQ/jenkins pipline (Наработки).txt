@@ -1,0 +1,92 @@
+=========== Реализация функционала с обработкой исключений ===========        
+
+	stage ('Запуск виртуальной машины') {
+            steps {
+                echo "================== Start VM ==================="
+                script {
+                try {
+                    sh "yc compute instance start agent-server"
+                } catch (Exception e){
+                    echo "Произошла ошибка, но пайплайн продолжается"
+                    }
+                }
+            }
+        }
+
+__________________________________________________________________________
+
+ =========== Выявление нужной информации из консолис помощью функции. Добавление информации в =========== 
+виртуальные переменные Jenkins:
+
+	stage('Get Agent Server IP') {
+            steps {
+                script {
+                    // Выполнение shell команды и сохранение вывода в переменную
+                    def output = sh(script: "yc compute instance list | grep agent-server | awk '{print \$10}'", returnStdout: true).trim()
+
+                    // Установка переменной окружения с IP для использования в дальнейших шагах
+                    env.AGENT_SERVER_EXTERNAL_IP = output
+
+                    echo "The Agent Server External IP is: ${env.AGENT_SERVER_EXTERNAL_IP}"
+                }
+            }
+        }
+
+${env.AGENT_SERVER_EXTERNAL_IP} - Переменная далее используется при подключении к серверу
+___________________________________________________________________________
+
+=========== Ожидание доступности поднятия сервера SSH для последующего подключения. =========== 
+
+	stage('Подождать доступность SSH') {
+            steps {
+                script {
+                    def attempts = 10
+                    def timeout = 10 // Задержка в секундах между попытками
+                    def successful = false
+                    for (int i = 0; i < attempts; i++) {
+                        try {
+                            echo "Попытка подключения по SSH номер: ${i+1}"
+                            // Замените следующую команду на команду для проверки доступности SSH
+                            // Например, команду пинга до вашего сервера
+                            echo "Подключение к серверу root@${env.AGENT_SERVER_EXTERNAL_IP}"
+                            sh 'which ssh'
+                            sh "ssh -o StrictHostKeyChecking=no root@${env.AGENT_SERVER_EXTERNAL_IP} 'echo SSH is up'"
+                            successful = true
+                            break // Прекратить попытки после успешного подключения
+                        } catch (Exception e) {
+                            echo "Не удалось подключиться, ожидание перед следующей попыткой..."
+                            sleep(timeout)
+                        }
+                    }
+                    if (!successful) {
+                        error "SSH не стал доступен после ${attempts} попыток."
+                    }
+                }
+            }
+        }
+
+__________________________________________________________________________________________
+
+=========== Паралельные запросы: =========== 
+
+
+	stage('Параллельные Запросы') {
+            parallel {
+                stage('Запрос 1') {
+                    steps {
+                        script {
+                            // Исправлено: использованы экранированные двойные кавычки вокруг команды curl и одинарные кавычки для groovy строки
+                            sh "ssh -o StrictHostKeyChecking=no root@${env.AGENT_SERVER_EXTERNAL_IP} \"curl -X POST 'http://localhost:11434/api/chat' -H 'Content-Type: application/json' -d @/home/agent-server/request2.json\" > ${WORKSPACE}/response.json"
+                        }
+                    }
+                }
+                stage('Запрос 2') {
+                    steps {
+                        script {
+                            // То же исправление применено и здесь
+                            sh "ssh -o StrictHostKeyChecking=no root@${env.AGENT_SERVER_EXTERNAL_IP} \"curl -X POST 'http://localhost:11434/api/chat' -H 'Content-Type: application/json' -d @/home/agent-server/request.json\" > ${WORKSPACE}/response2.json"
+                        }
+                    }
+                }
+            }
+        }

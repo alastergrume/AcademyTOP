@@ -35,9 +35,7 @@ docker run hello-world
 usermod -a -G docker jenkins
 
 GitHUB Token
-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
-
-
+-*----*----**---****-----
 ===================================================
 Включение Jenkins в группу sudo
 

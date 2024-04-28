@@ -1,0 +1,1 @@
+$ git push -f origin main - загрузка в GitHub с ключом --force на необходимую ветку

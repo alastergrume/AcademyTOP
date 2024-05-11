@@ -1,4 +1,4 @@
-from OOP.N12_MVC_Pattern.View.CplusDView import CplusDView
+from PART_3_OOP.N12_2024_05_08_MVC_Pattern.View.CplusDView import CplusDView
 
 
 # класс представляет реализацию контроллера.

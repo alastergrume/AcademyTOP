@@ -2,9 +2,9 @@
 
 from PyQt5 import QtWidgets
 from PyQt5.QtGui import QDoubleValidator
-from OOP.N12_MVC_Pattern.Utility.CplusDObserver import CplusDObserver
-from OOP.N12_MVC_Pattern.Utility.CplusDMeta import CplusDMeta
-from OOP.N12_MVC_Pattern.View.MainWindow import Ui_MainWindow
+from PART_3_OOP.N12_2024_05_08_MVC_Pattern.Utility.CplusDObserver import CplusDObserver
+from PART_3_OOP.N12_2024_05_08_MVC_Pattern.Utility.CplusDMeta import CplusDMeta
+from PART_3_OOP.N12_2024_05_08_MVC_Pattern.View.MainWindow import Ui_MainWindow
 
 
 class CplusDView(QtWidgets.QMainWindow, CplusDObserver, metaclass=CplusDMeta):

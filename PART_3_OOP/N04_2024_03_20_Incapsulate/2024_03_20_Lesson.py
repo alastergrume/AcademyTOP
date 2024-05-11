@@ -54,12 +54,12 @@ class Dog:
     def make_sound(self):
         print("Bark")
 
-# cat1 = Cat('Kitty', 2.5)
-# dog1 = Dog("Fluffy", 4)
-# for animal in (cat1, dog1):
-#     animal.make_sound()
-#     animal.info()
-#     animal.make_sound()
+cat1 = Cat('Kitty', 2.5)
+dog1 = Dog("Fluffy", 4)
+for animal in (cat1, dog1):
+    animal.make_sound()
+    animal.info()
+    animal.make_sound()
 
 
 # пример переопределения метода (перегрузка)
@@ -96,9 +96,9 @@ class Circle(Shape):
 
 a = Squre(4)
 b = Circle(7)
-# print(20*"*", "пример", 20*"*")
-# print(b, "Вывод 1")
+print(20*"*", "пример", 20*"*")
+print(b, "Вывод 1")
 print(b.fact(), 'Вывод два')
-# print(a.fact(), 'Вывод три')
-# print(b.area(), 'Вывод четыре')
+print(a.fact(), 'Вывод три')
+print(b.area(), 'Вывод четыре')
 

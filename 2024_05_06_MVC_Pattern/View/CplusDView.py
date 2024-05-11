@@ -1,15 +1,13 @@
 # import MainWindow_rc
 
-from pathlib import Path
 
-Utility = Path("D:/Ivan_Kalinin/Python/GitHub_Repo/AcademyTOP/Блок №3 Python_OOP/2024_05_06_MVC_Pattern/Utility")
-View = Path("D:/Ivan_Kalinin/Python/GitHub_Repo/AcademyTOP/Блок №3 Python_OOP/2024_05_06_MVC_Pattern/View")
+
 
 from PyQt5.QtGui import QWindow, QDoubleValidator
-from PyQt5.QtCore import PYQT_SIGNAL
+from PyQt5.QtCore import pyqtSignal
 from Utility.CplusDObserver import CplusDObserver
 from Utility.CplusDMeta import CplusDMeta
-from View.MainWindow import Ui_MainWindow
+from View import Ui_MainWindow
 
 
 class CplusDView(QWindow, CplusDObserver, metaclass=CplusDMeta):
@@ -27,5 +25,5 @@ class CplusDView(QWindow, CplusDObserver, metaclass=CplusDMeta):
         self.ui.le_c.setValidator(QDoubleValidator())
         self.ui.le_d.setValidator(QDoubleValidator())
         # связываем событие завершения редактирования с методом контроллера
-        self.connect(self.ui.le_c, PYQT_SIGNAL("editingFinished()"), self.mController.setC)
-        self.connect(self.ui.le_d, PYQT_SIGNAL("editingFinished()"), self.mController.setD)
+        self.connect(self.ui.le_c, pyqtSignal("editingFinished()"), self.mController.setC)
+        self.connect(self.ui.le_d, pyqtSignal("editingFinished()"), self.mController.setD)

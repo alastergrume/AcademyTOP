@@ -1,4 +1,4 @@
-from MVC_Pattern.View.CplusDView import CplusDView
+from OOP.N12_MVC_Pattern.View.CplusDView import CplusDView
 
 
 # класс представляет реализацию контроллера.

@@ -1,7 +1,0 @@
-MainWindow - QWainWindow
-    CentralWidget - QWidget
-        lbl_equal - QLabel
-        lbl_plus - Qlabel
-        le_c - QLineEdit
-        le_d - QLineEdit
-        le_result - QlineEdit

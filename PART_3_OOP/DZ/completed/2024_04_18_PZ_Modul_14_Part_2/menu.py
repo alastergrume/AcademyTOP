@@ -1,3 +1,5 @@
+
+
 class MainMenu:
     _instance = None
 
@@ -11,6 +13,7 @@ class MainMenu:
         else:
             print("Instance already created", self.getInstance())
         self.class_name = class_name
+
     @classmethod
     def getInstance(cls):
         if not cls._instance:

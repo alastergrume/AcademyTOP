@@ -55,6 +55,7 @@ class myQueue:
     def menu(self):
         while True:
             print("""
+                Вы вошли в класс myQueue!
                 1. Проверить очередь очередь на пустоту.
                 2. Проверить очередь на заполнение.
                 3. Добавить эллемент в очередь.
@@ -167,6 +168,7 @@ class myQueue2:
     def menu(self):
         while True:
             print("""
+                Вы вошли в класс myQueue2!
                 1. Проверить очередь очередь на пустоту.
                 2. Проверить очередь на заполнение.
                 3. Добавить элемент в очередь.
@@ -266,6 +268,7 @@ class LogingApp:
     def menu(self):
         while True:
             print("""
+                Вы вошли в класс LogginApp!
                 1. Добавить нового пользователя
                 2. Удалить существующего пользователя
                 3. Проверить существует ли пользователь
@@ -296,11 +299,16 @@ if __name__ == "__main__":
     myqueue2 = myQueue2()
     logging_app = LogingApp()
     menu = MainMenu([myqueue1, myqueue2, logging_app])
-    print(menu)
     menu.menu()
-    menu2 = MainMenu([logging_app])
-    print(menu2)
-    menu2.menu()
-    menu3 = MainMenu([myqueue1, myqueue2])
-    print(menu3)
-    menu3.menu()
+    # myqueue1.menu()
+    # myqueue2.menu()
+    # LogingApp.menu()
+
+    # print(menu)
+    # menu.menu()
+    # menu2 = MainMenu([logging_app])
+    # print(menu2)
+    # menu2.menu()
+    # menu3 = MainMenu([myqueue1, myqueue2])
+    # print(menu3)
+    # menu3.menu()

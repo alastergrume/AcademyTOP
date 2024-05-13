@@ -1,11 +1,15 @@
 from tkinter import *
 from controller import *
+from view_log import *
 
 
 class MainApp(Frame):
     def __init__(self, root):
         super(MainApp, self).__init__(root)
         self.build()
+        self.log = LOG(self)
+        self.log.log()
+
 
     def build(self):
         self.formula = '0'
@@ -28,3 +32,4 @@ class MainApp(Frame):
             if x > 400:
                 x = 10
                 y += 80
+

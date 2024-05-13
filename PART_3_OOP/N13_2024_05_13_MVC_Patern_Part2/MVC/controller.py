@@ -1,9 +1,12 @@
+from view_log import *
 def logicalc(app, operation):
     if operation == "C":
         app.formula = ''
     elif operation == 'DEL':
         app.formula = app.formula[0:-1]
     elif operation == '=':
+        # log = LOG()
+        # log.log_update()
         app.formula = str(eval(app.formula))
     elif operation == 'X^2':
         app.formula = str((eval(app.formula)) ** 2)

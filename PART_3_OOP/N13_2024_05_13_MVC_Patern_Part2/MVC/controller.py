@@ -13,7 +13,6 @@ def logicalc(app, operation):
         if app.formula == '0':
             app.formula = ''
         app.formula += operation
-
     update(app)
 
 

@@ -1,6 +1,5 @@
-from tkinter import *
 from view import *
-from controller import *
+
 
 
 def main():

@@ -1,7 +1,7 @@
-from menu import MainMenu
+from menu import MainMenu, MethodSort
 
 
-class myQueue:
+class myQueue(metaclass=MethodSort):
     """
     Задание 1
     Создайте класс очереди для работы с символьными значениями.
@@ -78,7 +78,7 @@ class myQueue:
                 break
 
 
-class myQueue2:
+class myQueue2(metaclass=MethodSort):
     """
     Создайте класс очереди с приоритетами для работы
     с символьными значениями.
@@ -197,7 +197,7 @@ class myQueue2:
                 print("Попробуй ещё раз")
 
 
-class LogingApp:
+class LogingApp(metaclass=MethodSort):
     """Задание №3
     Задание 3
     Необходимо разработать приложение, которое позволит сохранять информацию о логинах пользователей и их

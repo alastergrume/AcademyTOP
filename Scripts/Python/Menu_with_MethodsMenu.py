@@ -68,3 +68,9 @@ class MainMenu:
             choice_method = self.method_list[user_choice - 1]
             func = getattr(choice_class, choice_method)
             func()
+
+
+#TODO: Нужно настроить отправку наименований методов выбранного класса
+
+#INFO Настроено так чтобы, сначало был выбор классов, затем выбор методов класса. Для правильной работы нужно импортировать
+#INFO модули, затем в каждом классе настроить наследование следующим образом - class MyClass(metaclass=MethodSort):

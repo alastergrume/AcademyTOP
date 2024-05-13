@@ -1,24 +1,24 @@
 import inspect
 import re
+from for_test import MethodSort
 
-class MethodSort(type):
-    def __new__(meta, name, bases, dct):
-        methods = [name for name in dct if callable(dct[name]) and not name.startswith('__') and not name.startswith(
-            '_') and not name == 'menu']
-        dct['_methods'] = sorted(methods, key=lambda x: list(dct.keys()).index(x))
-        # print(f"Из класса MethodSort - {methods}")
-        return super().__new__(meta, name, bases, dct)
+# class MethodSort(type):
+#     def __new__(meta, name, bases, dct):
+#         methods = [name for name in dct if callable(dct[name]) and not name.startswith('__') and not name.startswith(
+#             '_') and not name == 'menu']
+#         dct['_methods'] = sorted(methods, key=lambda x: list(dct.keys()).index(x))
+#         return super().__new__(meta, name, bases, dct)
 
 class Numbers(metaclass=MethodSort):
-    def __init__(self, choice_method=None):
+    def __init__(self):
         self.list_of_numbers = []
-        self.choice_method = choice_method
+
 
     def __chekedlist(self):
         if len(self.list_of_numbers) == 0:
             print(f'\n{15 * "*"}\nСписок пуст\n{15 * "*"}\n')
             self.inputData()
-            self.menu()
+            self.menu(methodList)
 
     def inputData(self):
         while True:
@@ -88,8 +88,7 @@ class Numbers(metaclass=MethodSort):
             self.list_of_numbers.insert(i, user_choice2)
         print(f'\nОбновленный список\n{self.list_of_numbers}\n')
 
-    def menu(self, method_list):  # Вариант аргументов для альтернативного меню (self, method_list)
-        # print(f"Из меню в классе - {method_list}")
+    def menu(self, method_list):
         while True:
             print('Выбран Класс Numbers')
             list_menu = [
@@ -108,36 +107,17 @@ class Numbers(metaclass=MethodSort):
             print('-' * 30, sep='\n')
             # Вариант альтернативного меню
             user_choice = int(input("Введите номер меню - "))
-            if user_choice == 6:
+            if user_choice == count-1:
                 break
-            self.choice_method = method_list[user_choice - 1]
-            print(self.choice_method)
-            self.choice_method()
+            choice_method = method_list[user_choice - 1]
+            func = getattr(self, choice_method)
+            print(func)
+            func()
 
-            # try:
-            #     user_choice = int(input("Введите номер меню - "))
-            #     if user_choice == 6:
-            #         break
-            #     if user_choice == 1:
-            #         self.inputData()
-            #     if user_choice == 2:
-            #         self.del_item()
-            #     if user_choice == 3:
-            #         self.showListOfNumbers()
-            #     if user_choice == 4:
-            #         self.item_in_list()
-            #     if user_choice == 5:
-            #         self.rewrite_item()
-            # except ValueError as e:
-            #     print(e)
-            # except Exception as e:
-            #     print(e)
 
 
 if __name__ == '__main__':
     numbers = Numbers()
-    print(f"Из Main - {numbers._methods}")
-    # Альтернативный вариант Меню
     methodList = numbers._methods
     method = numbers.menu(methodList)
 

@@ -5,3 +5,4 @@ def new_grid():
     grid = np.zeros((ROWS, COLUMNS))
     return grid
 
+# print(new_grid())

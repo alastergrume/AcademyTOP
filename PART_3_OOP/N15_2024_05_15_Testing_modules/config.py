@@ -16,7 +16,7 @@ DISC_SIZE = 80
 DISC_RADIUS = int(DISC_SIZE/2 - 10)
 
 # Players
-PLAYER = 1
+PLAYER = 0
 AI_PLAYER = 1
 
 # Игровое поле

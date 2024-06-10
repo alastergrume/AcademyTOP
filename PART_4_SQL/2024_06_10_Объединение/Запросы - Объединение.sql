@@ -43,4 +43,16 @@ Assesment > ALL (
 );
 
 
+SELECT FirstName, + ' ' + LastName as FullName, BirthDate
+FROM Students
+WHERE MONTH (BirthDate) > 5
+AND MONTH(BirthDate) < 9
+UNION -- Объединение запросов
+SELECT FirstName, + ' ' + LastName as FullName, BirthDate
+FROM Teachers
+WHERE MONTH (BirthDate) > 5
+AND MONTH(BirthDate) < 9
+ORDER BY BirthDate
+
+
 

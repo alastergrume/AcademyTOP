@@ -1,7 +1,7 @@
 CREATE DATABASE Academy;
 use Academy;
        
-
+/*
         -- Диапазоны:
         -- Вариант 1 (с `BETWEEN`):
         -- ```sql
@@ -116,7 +116,7 @@ use Academy;
             --  Данные, которые вы хотите вставить в таблицы
 
             -- Я помогу вам сформулировать правильные запросы!
-
+*/
 
 CREATE TABLE Departments (
     Id int IDENTITY(1,1) PRIMARY KEY,
@@ -226,3 +226,6 @@ VALUES ('Josef', 20, 'Bezose'), ('Benedict', 40, 'Cumberbage'), ('Paul', 30, 'Ma
 
 INSERT iNTO Lectures(DayOfWeek, LectureRoom, SubjectId, TeacherId)
 VALUES (1, 'Programming room', 1, 1), (2, 'Herose Room', 2, 2), (3, 'Music Room', 3, 3);
+
+INSERT iNTO GroupsLectures(GroupId, LectureId)
+VALUES (1, 1), (2, 2), (3, 3);

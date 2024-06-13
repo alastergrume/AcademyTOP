@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS Groups (
     Id int PRIMARY KEY AUTO_INCREMENT, 
         -- + ▷ Тип данных — int. 
         -- + Авто приращение., AUTO_INCREMENT
-        -- + Не может содержать null-значения., ДЛя первичного ключа по умолчанию значение NOT NULL
+        -- + Не может содержать null-значения., Для первичного ключа по умолчанию значение NOT NULL
         -- + Первичный ключ PRIMARY KEY
 
     Name nvarchar(10) UNIQUE NOT NULL CHECK(Name != ''), 

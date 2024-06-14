@@ -1,3 +1,0 @@
-docker build -t academy_db .
-
-docker run academy_db

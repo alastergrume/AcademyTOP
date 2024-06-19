@@ -92,7 +92,7 @@ as
 begin
     INSERT INTO Sales_History (ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice)
 	SELECT ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice
-	FROM ADD_History;
+	FROM inserted;
 End;
 
 
@@ -106,7 +106,15 @@ ON Sales
 FOR UPDATE
 AS
 BEGIN
+    DECLARE @product_quality
+    @product_quality = Quantity_in_Stock
+    FROM updated
+    IF @product_quality == 0
+        begin
 
-
+        INSERT INTO Archive (ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice)
+        SELECT ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice
+        FROM updated;
+        end
 End
 

@@ -6,52 +6,61 @@ CREATE TABLE Products (
 	Id INT IDENTITY(1,1) PRIMARY KEY,
 	ProductName nvarchar(100) UNIQUE NOT NULL CHECK(ProductName != ''),
 	ProductType nvarchar(100) NOT NULL CHECK(ProductType != ''),
-	Quantity_in_Stock money DEFAULT(0) NOT NULL CHECK(Quantity_in_Stock >= 0),    -- Количество товара в наличии
-	ProductCost money NOT NULL,-- Себестоимость товара
-	ProductDeveloper nvarchar(100) NOT NULL, -- Производитель
-	ProductPrice money NOT NULL, -- Цена продажи
+	Quantity_in_Stock money DEFAULT(0) NOT NULL CHECK(Quantity_in_Stock >= 0),    -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	ProductCost money NOT NULL,-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	ProductDeveloper nvarchar(100) NOT NULL, -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	ProductPrice money NOT NULL, -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 );
 
 CREATE TABLE Sales (
 	Id INT IDENTITY(1,1) PRIMARY KEY,
 	ProductName nvarchar(100) UNIQUE NOT NULL CHECK(ProductName != ''),
-	ProductCost  money DEFAULT(0) NOT NULL CHECK(ProductCost >= 0), -- Себестоимость товара
-	Qauntity_sale money DEFAULT(0) NOT NULL CHECK(Qauntity_sale >= 0), -- Количество Товара в продаже
-	Sale_data date NOT NULL, -- Дата продажи
-	Name_of_Employee nvarchar(max) NOT NULL CHECK(Name_of_Employee != ''), -- Сотрудник FORIGN KEY
-	Name_Of_Buyer nvarchar(max) -- Покупатель FORIGN KEY
+	ProductCost  money DEFAULT(0) NOT NULL CHECK(ProductCost >= 0), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	Qauntity_sale money DEFAULT(0) NOT NULL CHECK(Qauntity_sale >= 0), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	Sale_data date NOT NULL, -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	Name_of_Employee nvarchar(max) NOT NULL CHECK(Name_of_Employee != ''), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FORIGN KEY
+	Name_Of_Buyer nvarchar(max) -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FORIGN KEY
 );
 
 CREATE TABLE Sales_History (
 	Id INT IDENTITY(1,1) PRIMARY KEY,
 	ProductName nvarchar(100) UNIQUE NOT NULL CHECK(ProductName != ''),
-	ProductCost  money DEFAULT(0) NOT NULL CHECK(ProductCost >= 0), -- Себестоимость товара
-	Qauntity_sale money DEFAULT(0) NOT NULL CHECK(Qauntity_sale >= 0), -- Количество Товара в продаже
-	Sale_data date NOT NULL, -- Дата продажи
-	Name_of_Employee nvarchar(max) NOT NULL CHECK(Name_of_Employee != ''), -- Сотрудник FORIGN KEY
-	Name_Of_Buyer nvarchar(max) -- Покупатель FORIGN KEY
+	ProductCost  money DEFAULT(0) NOT NULL CHECK(ProductCost >= 0), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	Qauntity_sale money DEFAULT(0) NOT NULL CHECK(Qauntity_sale >= 0), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	Sale_data date NOT NULL, -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	Name_of_Employee nvarchar(max) NOT NULL CHECK(Name_of_Employee != ''), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FORIGN KEY
+	Name_Of_Buyer nvarchar(max) -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FORIGN KEY
 );
 
+CREATE TABLE Archiv (
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	ProductName nvarchar(100) UNIQUE NOT NULL CHECK(ProductName != ''),
+	ProductCost  money DEFAULT(0) NOT NULL CHECK(ProductCost >= 0), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	Qauntity_sale money DEFAULT(0) NOT NULL CHECK(Qauntity_sale >= 0), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	Sale_data date NOT NULL, -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	Name_of_Employee nvarchar(max) NOT NULL CHECK(Name_of_Employee != ''), -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FORIGN KEY
+	Name_Of_Buyer nvarchar(max) -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ FORIGN KEY
+);
 
 CREATE TABLE Employee( 
 	Id INT IDENTITY(1,1) PRIMARY KEY,
-	Name_of_Employee NVARCHAR(100) NOT NULL, -- Сотрудник
-	Post NVARCHAR(max) NOT NULL,                     -- Должность
-	Date_of_employment date NOT NULL,       -- Дата приема на работу
-	Gender NVARCHAR(max) NOT NULL,                    -- Пол
-	Salary money NOT NULL                   -- Зарплата
+	Name_of_Employee NVARCHAR(100) NOT NULL, -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	Post NVARCHAR(max) NOT NULL,                     -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	Date_of_employment date NOT NULL,       -- пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	Gender NVARCHAR(max) NOT NULL,                    -- пїЅпїЅпїЅ
+	Salary money NOT NULL                   -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 );
 
 CREATE TABLE Customers ( 
 	Id INT IDENTITY(1,1) PRIMARY KEY,
 	Name_Of_Buyer nvarchar(max) NOT NULL,
 	Email nvarchar(max), -- Email
-	Phone INT, -- Телефон
-	gender NVARCHAR(50) NOT NULL, -- Пол
-	order_history INT NOT NULL,   -- История Заказов FORIGN KEY
+	Phone INT, -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	gender NVARCHAR(50) NOT NULL, -- пїЅпїЅпїЅ
+	order_history INT NOT NULL,   -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ FORIGN KEY
 
-	discount INT CHECK(discount BETWEEN 1 AND 100),  -- Процент скидки
-	Subscription NVARCHAR(50) -- Подписка
+	discount INT CHECK(discount BETWEEN 1 AND 100),  -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	Subscription NVARCHAR(50) -- пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 );
 
 ALTER TABLE Sales
@@ -69,19 +78,35 @@ ADD CONSTRAINT FK_Customers_Sales
 FOREIGN KEY (order_history) REFERENCES Sales_History(Id);
 
 
-------------------ТРИГГЕРЫ------------------
+------------------пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ------------------
 
--- №1
--- При продаже товара, заносить информацию о продаже в 
--- таблицу «История». Таблица «История» используется для 
--- дубляжа информации о всех продажах
+-- пїЅ1
+-- пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ 
+-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ 
+-- пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-CREATE TRIGGER Delete_history
+CREATE TRIGGER ADD_History
 on Sales
-for insert as 
+AFTER INSERT
+as
 begin
+    INSERT INTO Sales_History (ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice)
+	SELECT ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice
+	FROM ADD_History;
+End;
 
 
-	
+-- в„–2
+-- Р•СЃР»Рё РїРѕСЃР»Рµ РїСЂРѕРґР°Р¶Рё С‚РѕРІР°СЂР° РЅРµ РѕСЃС‚Р°Р»РѕСЃСЊ РЅРё РѕРґРЅРѕР№ РµРґРёРЅРёС†С‹ РґР°РЅРЅРѕРіРѕ С‚РѕРІР°СЂР°, РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРЅРµСЃС‚Рё РёРЅС„РѕСЂРјР°С†РёСЋ
+-- Рѕ РїРѕР»РЅРѕСЃС‚СЊСЋ РїСЂРѕРґР°РЅРЅРѕРј С‚РѕРІР°СЂРµ РІ С‚Р°Р±Р»РёС†Сѓ В«РђСЂС…РёРІВ»
+
+
+CREATE TRIGGER
+ON Sales
+FOR UPDATE
+AS
+BEGIN
+
 
 End
+

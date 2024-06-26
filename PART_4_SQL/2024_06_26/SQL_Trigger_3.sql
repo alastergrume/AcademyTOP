@@ -7,7 +7,7 @@ begin
 	select @FIO= [Name_Of_Buyer] from inserted
 	declare @cust_email char
 	select @cust_email = [Email] from inserted
-	
+	-- Сравнение информации из 
 	if (@FIO != (select Name_Of_Buyer
 				from Customers
 				where @FIO = Name_Of_Buyer))

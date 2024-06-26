@@ -1,5 +1,23 @@
 {
     "dataworkspace.excludedProjects": [
-        "mesql/mesql.sqlproj"
+        "mesql/mesql.sqlproj",
+        "My_DB/My_DB.sqlproj"
+    ],
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true
+            },
+            "previewLimit": 50,
+            "server": "158.160.30.80",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "ACADEMY_TOP_DB",
+            "username": "sa",
+            "password": "<Ivan@Passw0rd>",
+            "database": "Sportshop"
+        }
     ]
 }

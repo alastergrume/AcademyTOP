@@ -85,15 +85,15 @@ FOREIGN KEY (order_history) REFERENCES Sales_History(Id);
 -- ������� ���������. ������� ��������� ������������ ��� 
 -- ������� ���������� � ���� ��������
 
-CREATE TRIGGER ADD_History
-on Sales
-AFTER INSERT
-as
-begin
-    INSERT INTO Sales_History (ProductName,	ProductCost, Qauntity_sale, Sale_data, Name_of_Employee, Name_Of_Buyer)
-	SELECT ProductName,	ProductCost, Qauntity_sale, Sale_data, Name_of_Employee, Name_Of_Buyer
-	FROM inserted;
-End;
+-- CREATE TRIGGER ADD_History
+-- on Sales
+-- AFTER INSERT
+-- as
+-- begin
+--     INSERT INTO Sales_History (ProductName,	ProductCost, Qauntity_sale, Sale_data, Name_of_Employee, Name_Of_Buyer)
+-- 	SELECT ProductName,	ProductCost, Qauntity_sale, Sale_data, Name_of_Employee, Name_Of_Buyer
+-- 	FROM inserted;
+-- End;
 
 -- проверка работоспособности
 
@@ -129,19 +129,19 @@ SELECT TOP (1000) [Id]
 -- о полностью проданном товаре в таблицу «Архив»
 
 
-CREATE TRIGGER
-ON Sales
-FOR UPDATE
-AS
-BEGIN
-    DECLARE @product_quality
-    @product_quality = Quantity_in_Stock
-    FROM updated
-    IF @product_quality == 0
-        begin
-			INSERT INTO Archive (ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice)
-			SELECT ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice
-			FROM updated;
-        end
-End
+-- CREATE TRIGGER
+-- ON Sales
+-- FOR UPDATE
+-- AS
+-- BEGIN
+--     DECLARE @product_quality
+--     @product_quality = Quantity_in_Stock
+--     FROM updated
+--     IF @product_quality == 0
+--         begin
+-- 			INSERT INTO Archive (ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice)
+-- 			SELECT ProductName,	ProductType, Quantity_in_Stock, ProductCost, ProductDeveloper, ProductPrice
+-- 			FROM updated;
+--         end
+-- End
 

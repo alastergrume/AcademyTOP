@@ -1,0 +1,272 @@
+1. Установка Docker
+ 
+Docker Engine 1.8 и более поздних версий на любом поддерживаемом дистрибутиве Linux. 
+Дополнительные сведения см. в разделе Установка Docker.
+https://docs.docker.com/engine/installation/
+
+
+2. Установите последнюю версию sqlcmd на узле Docker. 
+
+Установка и синтаксис sqlcmd
+https://learn.microsoft.com/ru-ru/sql/tools/sqlcmd/sqlcmd-utility?view=sql-server-ver16&tabs=go%2Clinux&pivots=cs1-bash
+
+
+3. Извлечение контейнера из реестра:
+
+$ sudo docker pull mcr.microsoft.com/mssql/server:2022-latest
+
+
+4. Запуск контейнера:
+
+sudo docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<Ivan@Passw0rd>" \
+   -p 1433:1433 --name sql1 --hostname sql1 \
+   -d \
+   mcr.microsoft.com/mssql/server:2022-latest
+   
+ВАЖНО: 
+Это все пароль - 
+<MyStrong@Passw0rd>   
+
+<Ivan@Passw0rd>
+
+   
+Пароль должен соответствовать политике паролей ПО умолчанию SQL Server, 
+в противном случае контейнер не cможет настроить SQL Server и перестанет работать.
+
+5. Проверка логов:
+
+https://docs.docker.com/engine/reference/commandline/logs/
+
+$ docker logs sql1
+
+
+
+
+
+=======================================================================
+
+Обращение к базе данных
+
+В следующем примере старый и новый пароли считываются из вводимых пользователем данных.
+
+sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
+	-S localhost -U SA \
+	-P "$(read -sp "Enter current SA password: "; echo "${REPLY}")" \
+	-Q "ALTER LOGIN SA WITH PASSWORD=\"$(read -sp "Enter new SA password: "; echo "${REPLY}")\""
+
+----------------------------------------------
+
+Отключение учетной sa записи в качестве рекомендации
+
+	Смотри документацию
+
+
+----------------------------------------------
+Подключение к SQL Server
+
+$ sudo docker exec -it my_sql_db "bash"
+
+В следующих шагах используется программа командной строки SQL Server, 
+служебная программа sqlcmd в контейнере для подключения к SQL Server.
+
+Вход в sqlcmd Для осуществления запросов к базе:
+
+$ sudo /opt/mssql-tools/bin/sqlcmd -S localhost -U SA
+
+-U ключ после которого указывается пользователь
+в основном нужно вводить без sudo
+
+
+выход QUIT
+
+
+
+------------------------------------------------------
+Использование томов для сохранения базы данных из контейнера:
+https://learn.microsoft.com/ru-ru/sql/linux/sql-server-linux-docker-container-configure?view=sql-server-ver16&pivots=cs1-bash#persist
+
+
+-v <host directory>:/var/opt/mssql
+
+Использование проброса папок:
+
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<MyStrong!Passw0rd>' \
+-p 1433:1433 \
+-v /home/ivan/sql1/data:/var/opt/mssql/data \
+-v /home/ivan/sql1/log:/var/opt/mssql/log \
+-v /home/ivan/sql1/secrets:/var/opt/mssql/secrets \
+-d mcr.microsoft.com/mssql/server:2022-latest
+
+
+
+
+Такой вариант сработал:
+Использование volume:
+
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+-p 1433:1433 \
+-v sqlvolume:/var/opt/mssql \
+-d mcr.microsoft.com/mssql/server:2022-latest
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+Скрипт для запуска базы:
+
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+-p 1433:1433 \
+-v sqlvolume:/var/opt/mssql \
+--restart=always \
+-d mcr.microsoft.com/mssql/server:2022-latest
+
+docker exec -it <name> "bash"
+
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA
+
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+
+Работа с базой
+
+Создание базы данных
+Выполните следующие шаги, чтобы создать базу данных TestDB.
+
+В приглашении команды sqlcmd вставьте следующую команду Transact-SQL, чтобы создать тестовую базу данных:
+
+SQL
+
+
+CREATE DATABASE TestDB;
+В следующей строке напишите запрос, который должен вернуть имена всех баз данных на сервере:
+
+SQL
+
+
+SELECT Name from sys.databases;
+Две предыдущие команды не были выполнены сразу. Введите GO на новой строке, чтобы выполнить предыдущие команды:
+
+SQL
+
+GO
+
+
+
+
+Вставка данных
+Теперь создайте таблицу Inventory и вставьте две новых строки.
+
+В приглашении команды sqlcmd переключите контекст на новую базу данных TestDB:
+
+SQL
+
+USE TestDB;
+Создайте таблицу Inventory:
+
+SQL
+
+CREATE TABLE Inventory (id INT, name NVARCHAR(50), quantity INT);
+Вставьте данные в новую таблицу:
+
+SQL
+
+INSERT INTO Inventory VALUES (1, 'banana', 150); INSERT INTO Inventory VALUES (2, 'orange', 154);
+Введите GO, чтобы выполнить предыдущие команды:
+
+SQL
+
+GO
+
+Посмотреть все таблицы в базе дынных:
+SELECT * FROM INFORMATION_SCHEMA.TABLES
+GO
+
+
+Выбор данных
+Теперь выполните запрос, чтобы вернуть данные из таблицы Inventory.
+
+В приглашении команды sqlcmd введите запрос, который должен вернуть из таблицы Inventory строки, где количество превышает 152:
+
+SQL
+
+SELECT * FROM Inventory WHERE quantity > 152;
+Выполните команду:
+
+SQL
+
+GO
+Выход из приглашения команды sqlcmd
+Чтобы завершить сеанс sqlcmd, введите QUIT:
+
+SQL
+
+QUIT
+Чтобы выйти из интерактивной командной строки в контейнере, введите команду exit. Контейнер продолжит работать после выхода из интерактивной оболочки bash.
+
+
+
+-------------------------------------------------
+
+Подключение к базе в докере на Linux через SSMS:
+
+Server name: 192.168.0.27, 1433
+Authensation: SQL Server Authentication
+Login: sa
+PASSWORD: <YourStrong!Passw0rd>
+Trust server certificate
+
+
+
+------------------------------------------------------------------
+Скрипт для запуска Базы данных на виртуальной машине Яндекс Клауд
+yc_db_51.250.97.31 ivan
+
+!#/bin/bush
+
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<Ivan@Passw0rd>' \
+-p 1433:1433 --name sql1 --hostname sql1 \
+-v sqlvolume:/var/opt/mssql \
+--restart=always \
+-d mcr.microsoft.com/mssql/server:2022-latest
+
+docker exec -it sql1 "bash"
+
+/opt/mssql-tools/bin/sqlcmd -S localhost -U SA
+
+echo "<Ivan@Passw0rd>"
+------------------------------------------------------------------
+
+Настройка crone для копирования базы данных.
+
+переходим под root
+sudo -i
+
+папка, которую необходимо сохранять:
+cd /var/lib/docker/volumes/sqlvolume/_data/
+
+
+Открытие конфигурационного файла crontab 
+crontab -e
+
+Скрипт для rsinc
+
+rsync -ar /var/lib/docker/volumes/sqlvolume/_data/ /backup
+
+file name - backup.sh
+
+path to file - /backup
+
+Команда в конфигурацинном файле crontab:
+
+*/2 * * * * bash "/backup/backup.sh" >/dev/null 2>&1
+
+>/dev/null 2>&1 - обеспечивает запуск команды crontab без почтового клиента
+
+
+
+_____________________________________________________________________________
+
+
+158.160.30.80
+<Ivan@Passw0rd>

@@ -11,7 +11,7 @@
                 "encrypt": true
             },
             "previewLimit": 50,
-            "server": "158.160.30.80",
+            "server": "130.193.40.95",
             "port": 1433,
             "driver": "MSSQL",
             "name": "ACADEMY_TOP_DB",

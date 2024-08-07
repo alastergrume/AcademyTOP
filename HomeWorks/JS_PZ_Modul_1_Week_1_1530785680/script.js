@@ -36,7 +36,7 @@
 // let valuex = (value2*(-1)) / value;
 // alert('Искомое число - ' + (value/value2));
 
-//Задание №7
+// Задание №7
 // let value = +prompt('Сколько сейчас часов?');
 // let value2 = +prompt('Сколько сейчас минут?');
 // let houre = 23 - value;
